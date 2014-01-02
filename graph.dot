@@ -1,0 +1,15 @@
+strict graph  {
+	alright	 [shape=box,
+		xlabel=1.0];
+	alright -- alright	 [label=1.0];
+	hear	 [shape=box,
+		xlabel=0.0];
+	hear -- hear	 [label=1.0];
+	"hear it,"	 [shape=box,
+		xlabel=0.0];
+	hear -- "hear it,"	 [label=1.0];
+	"hear it," -- "hear it,"	 [label=1.0];
+	"obama."	 [shape=box,
+		xlabel=0.74];
+	"obama." -- "obama."	 [label=1.0];
+}
