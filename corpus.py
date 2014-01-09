@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from io import BytesIO
 
@@ -13,9 +14,9 @@ from lxml import etree
 
 
 class Corpus(object):
-    def __init__(self, tweet, tweet_words, bi_grams, tri_grams, four_grams, five_grams):
-        self.tweet = tweet
-        self.tweet_words = tweet_words
+    def __init__(self, doc, doc_words, bi_grams, tri_grams, four_grams, five_grams):
+        self.doc = doc
+        self.doc_words = doc_words
         self.bi_grams = bi_grams
         self.tri_grams = tri_grams
         self.four_grams = four_grams
@@ -24,9 +25,9 @@ class Corpus(object):
     def parse_xml(self):
         #parser = etree.XMLParser(ns_clean=True, remove_pis=True, recover=True)
         parser = etree.XMLParser(recover=True)
-        f = etree.parse(BytesIO(self.tweet), parser)
+        self.doc = '<xml>' + self.doc + '</xml>'
+        f = etree.parse(BytesIO(self.doc), parser)  # self.doc must be xml
         fstring = etree.tostring(f, pretty_print=True)
-        print fstring
         element = etree.fromstring(fstring)
         return element
 
@@ -46,12 +47,11 @@ class Corpus(object):
                         symbols = ",[]();:<>+=&+%!@#~?{}|"
                         whitespace = "                      "
                         replace = maketrans(symbols, whitespace)
-                        tweet_word = word_location[1].translate(replace)
-                        tweet_word = tweet_word.lstrip()
-                        tweet_word = tweet_word.rstrip()
+                        doc_word = word_location[1].translate(replace)
+                        doc_word = doc_word.strip()
 
-                        if len(tweet_word) > 1 and not len(tweet_word) > 16:
-                            self.tweet_words.append(tweet_word)
+                        if len(doc_word) > 1 and not len(doc_word) > 16:
+                            self.doc_words.append(doc_word)
 
                     bi_grams = bigrams(words)
                     if not len(bi_grams) < 1:

@@ -1,7 +1,0 @@
-"(u'none', u'relationship')","[(u'relationship', u'none')]"
-"(u""i'm"", u'a.i', u'glad')","[(u""i'm"", u'a.i'), (u'a.i', u'glad')]"
-"(u'lose', u'care', u'peace', u'ppl')","[(u'lose', u'peace'), (u'ppl', u'lose'), (u'care', u'ppl')]"
-"(u'home.', u'chance', u'hope a.i', u'goin')","[(u'home.', u'goin'), (u'chance', u'goin'), (u'goin', u'hope a.i')]"
-"(u'blame', u'responsibility')","[(u'blame', u'responsibility')]"
-"(u'over.', u'boy', u'mine', u'walk', u'year', u'wanna')","[(u'over.', u'boy'), (u'mine', u'boy'), (u'walk', u'boy'), (u'wanna', u'mine'), (u'year', u'wanna')]"
-"(u'anyone', u'dm', u'shit')","[(u'anyone', u'shit'), (u'shit', u'dm')]"

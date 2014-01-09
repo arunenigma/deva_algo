@@ -1,8 +1,3 @@
-import pygraphviz as pgv
-import networkx as nx
-import itertools
-
-
 class FuzzyConcept(object):
     def __init__(self, f1, f1_clone):
         self.f1 = f1
@@ -28,7 +23,6 @@ class FuzzyConcept(object):
         for row in self.f1:
             pi.append(float(row[1]))
             ps.append(float(row[2]))
-        print ps
         self.max_ps = max(ps)
         self.min_pi = min(pi)
         self.max_pi = max(pi)

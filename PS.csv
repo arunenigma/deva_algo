@@ -1,476 +1,999 @@
-genesis,genesis,1.0
-vedas.,vedas.,1.0
-word,word,0.9073668380799275
-creation,beginning,1.0
-god,god,0.9073668380799275
-beginning,creation,1.0
-vcdas,vcdas,0.9073668380799275
-guidance,guidance,1.0
-humanity.,humanity.,1.0
-uplift,uplift,1.0
-flood,flood,1.0
-light,light,1.0
-throw,throw,1.0
-perfect,perfect,0.8064025494988969
-life,man,1.0
-god,god,0.8064025494988969
-man perfect,man perfect,0.8064025494988969
-man,life,1.0
-ideal,ideal,0.8064025494988969
-man perfect,man,0.8064025494988969
-creation,source,1.0
-beginning,beginning,0.6064770843267491
-source,creation,1.0
-knowledge reveals,knowledge reveals,0.6064770843267491
-knowledge,knowledge,0.6064770843267491
-knowledge,knowledge reveals,0.6064770843267491
-knowledge reveals,knowledge,0.6064770843267491
-soul,soul,1.0
-part,part,1.0
-satis-,satis-,1.0
-adequate,adequate,1.0
-truth,truth,0.7026988820613246
-faction,faction,0.7026988820613246
-fulfilment,journey,1.0
-thirst,fulfilment,0.8017992547075498
-journey,fulfilment,1.0
-life,life,0.7026988820613246
-contain,contain,1.0
-god,god,1.0
-soul,soul,1.0
-"god creates,","god creates,",1.0
-world.,world.,1.0
-god,god,1.0
-knowledge,knowledge,1.0
-vedas,vedas,1.0
-god,god,1.0
-world,world,1.0
-eternity,eternity,1.0
-ever.,ever.,1.0
-veda,veda mandal,0.8481764657366792
-rig veda,10,0.8801814218262066
-yajurveda chapter,10,0.9121863779157339
-veda mandal,veda,0.8481764657366792
-31,31,0.8481764657366792
-mandal,sukta,0.8587371795302491
-sukta,chapter,0.9268614589502794
-90,rig,1.0
-rig veda mandal,rig veda mandal,0.8481764657366792
-rig,90,1.0
-chapter,mantra,0.934934046538344
-rig veda mandal,rig veda,0.8481764657366792
-rig veda mandal,rig,0.8481764657366792
-10,yajurveda chapter,0.9121863779157339
-yajurveda,yajurveda,0.8481764657366792
-veda mandal,veda mandal,0.8481764657366792
-yajurveda,yajurveda chapter,0.8481764657366792
-veda,veda,0.8481764657366792
-mantra,rig,0.9609823811596754
-veda kand,veda,0.6594566732342131
-revela-,revela-,0.6594566732342131
-kand,kand,0.6594566732342131
-speak,atharva,1.0
-20,atharva,0.6837587687333767
-atharva veda kand,atharva veda kand,0.6594566732342131
-mantra,speak,0.7445925049256599
-atharva veda kand,atharva veda,0.6594566732342131
-veda,20,0.6596165564723555
-sutta,sutta,0.6594566732342131
-verse,verse,0.6594566732342131
-atharva veda,10,0.6983046325375897
-atharva veda kand,atharva,0.6594566732342131
-atharva,speak,1.0
-10,atharva veda,0.6983046325375897
-veda kand,veda kand,0.6594566732342131
-rig,sama,1.0
-vedas,vedas,0.7972150121978021
-tion,tion,0.7972150121978021
-yajur,rig,0.9568831292090324
-"vedas rig,","vedas rig,",0.7972150121978021
-sama,rig,1.0
-"vedas rig,",vedas,0.7972150121978021
-atharva.,atharva.,0.7972150121978021
-vedas,"vedas rig,",0.7972150121978021
-"swami dayananda,whose",swami,1.0
-"swami dayananda,whose","swami dayananda,whose commentary",1.0
-"swami dayananda,whose commentary",swami,1.0
-"swami dayananda,whose commentary","swami dayananda,whose commentary",1.0
-swami,"swami dayananda,whose",1.0
-swami,"swami dayananda,whose commentary",1.0
-swami,swami,1.0
-"swami dayananda,whose commentary","swami dayananda,whose",1.0
-"swami dayananda,whose","swami dayananda,whose",1.0
-introduction,introduction,1.0
-subject,subject,1.0
-translation,translation,1.0
-vedas.,vedas.,1.0
-translation,translation,1.0
-101,101,1.0
-mahabhashya,mahabhashya,1.0
-maharshi,maharshi,1.0
-maharshi patanjali,maharshi,1.0
-patanjali,patanjali,1.0
-maharshi patanjali,maharshi patanjali,1.0
-maharshi,maharshi patanjali,1.0
-shakhas,shakhas,1.0
-yajurveda,yajurveda,1.0
-taitriya,taitriya,1.0
-kanva,kanva,1.0
-madhyandini,madhyandini,1.0
-present,present,1.0
-kathak,kathak,0.9794142870239413
-dayananda,dayananda,0.9794142870239413
-maitrayani,maitrayani,0.9794142870239413
-point,maharshi,1.0
-maharshi dayananda,maharshi,0.9794142870239413
-maharshi,point,1.0
-maharshi dayananda,maharshi dayananda,0.9794142870239413
-kapishthal,kapishthal,0.9794142870239413
-patanjali.,patanjali.,1.0
-20380,20380,1.0
-vedas,vedas,1.0
-10522,10522,1.0
-veda,veda,1.0
-rig veda,rig veda,1.0
-rig veda,rig,1.0
-rig,rig,1.0
-rig,rig veda,1.0
-yajur,yajur,1.0
-veda,veda,1.0
-2006,2006,1.0
-yajur veda,yajur veda,1.0
-yajur veda,yajur,1.0
-yajur,yajur veda,1.0
-1875,1875,1.0
-veda,veda,1.0
-sam,sam veda,1.0
-sam,sam,1.0
-sam veda,sam,1.0
-sam veda,sam veda,1.0
-5977,5977,1.0
-atharva veda,atharva,1.0
-atharva veda,atharva veda,1.0
-veda,veda,1.0
-atharva,atharva,1.0
-atharva,atharva veda,1.0
-time,time,1.0
-vedas,vedas,0.8714536921777168
-memory,system,1.0
-reproduce,reproduce,0.8714536921777168
-system,memory,1.0
-patronage.,patronage.,1.0
-lack,lack,1.0
-vogue,vogue,1.0
-state,state,1.0
-rishis,rishis,1.0
-mantras,mantras,1.0
-research scholars,research,1.0
-research,research scholars,1.0
-research,research,1.0
-research scholars,research scholars,1.0
-yajur veda,yajur,1.0
-yajur,yajur veda,1.0
-yajur,yajur,1.0
-yajur veda,yajur veda,1.0
-veda,veda,1.0
-western scholars,western,0.9715480069019404
-devata,devata,0.9715480069019404
-western scholars,western scholars,0.9715480069019404
-matter,matter,0.9715480069019404
-western,subject,1.0
-subject,western,1.0
-subject matter,subject matter,0.9715480069019404
-subject matter,subject,0.9715480069019404
-beneficent,beneficent forces,1.0
-beneficent forces,beneficent forces,1.0
-beneficent forces,beneficent,1.0
-beneficent,beneficent,1.0
-verse,verse,1.0
-water,sun,0.9710806977516546
-sun,water,0.9710806977516546
-fire,fire,0.9581595415229389
-electricity,nature,1.0
-nature,electricity,1.0
-moon,moon,0.9581595415229389
-teacher,mother,1.0
-father,mother,0.9832538272936987
-bene-,bene-,0.9458720795571146
-soul,soul,0.9458720795571146
-mother,teacher,1.0
-humanity,humanity,1.0
-be.,be.,1.0
-vedas,vedas,1.0
-correct,correct interpretation,1.0
-correct,correct,1.0
-interpretation,interpretation,1.0
-correct interpretation,correct,1.0
-correct interpretation,correct interpretation,1.0
-i.e.,i.e.,1.0
-sense,sense,1.0
-"vedic words,",vedic,1.0
-vedic,vedic,1.0
-vedic,"vedic words,",1.0
-"vedic words,","vedic words,",1.0
-word gft,word,1.0
-word gft,word gft,1.0
-word,word gft,1.0
-word,word,1.0
-sense,sense,1.0
-gft,gft,1.0
-brahmanas,brahmanas,1.0
-water,water,1.0
-veda,veda,1.0
+seek,seek,0.045821756032608844
+whole,whole,0.045821756032608844
+shurpanakha,lanka,0.11413159386999856
+protection,protection,0.045821756032608844
+"headless monster,","headless monster,",0.045821756032608844
+ogresses. meanwhile,ogresses. meanwhile rama,0.045821756032608844
+fallen,land,0.10003783300906287
+eat,eat,0.045821756032608844
+run,forest,0.07289662848364731
+envelop,envelop,0.045821756032608844
+her.,her.,0.045821756032608844
+come,come,0.045821756032608844
+persuade,persuade,0.045821756032608844
+"bitter lament,","bitter lament,",0.045821756032608844
+help,help,0.045821756032608844
+gratitude,gratitude,0.045821756032608844
+ogresses.,ogresses. meanwhile,0.045821756032608844
+middle,vulture,0.1459893774795024
+"golden chariot,","golden chariot,",0.045821756032608844
+jatayus,story,0.1613997807790245
+darkness,darkness,0.045821756032608844
+sita.,sita.,0.045821756032608844
+"marichas aid,","marichas aid,",0.045821756032608844
+delirium,delirium,0.045821756032608844
+ogresses. meanwhile rama,ogresses. meanwhile,0.045821756032608844
+shut,shut,0.045821756032608844
+embrace,embrace,0.045821756032608844
+curse,curse,0.045821756032608844
+ogresses. meanwhile rama,ogresses.,0.045821756032608844
+empty,empty,0.045821756032608844
+demon catches,demon catches,0.045821756032608844
+demon catches,demon,0.045821756032608844
+forest-,forest- hermits,0.045821756032608844
+recovery,recovery,0.045821756032608844
+marichas,"marichas aid,",0.045821756032608844
+dasharathas,dasharathas,0.045821756032608844
+destroy,destroy,0.045821756032608844
+ogresses. meanwhile,ogresses. meanwhile,0.045821756032608844
+ogre falls,ogre falls,0.045821756032608844
+"twelve months,","twelve months,",0.045821756032608844
+rakshasas. rama,rakshasas.,0.045821756032608844
+deception,deception,0.045821756032608844
+calm,calm,0.045821756032608844
+time,time,0.045821756032608844
+intention,intention,0.045821756032608844
+ascetic.,ascetic. with,0.045821756032608844
+ascetic. with,"ascetic. with marichas aid,",0.045821756032608844
+"demon marichi,","demon marichi,",0.045821756032608844
+twelve,"twelve months,",0.045821756032608844
+headless,headless,0.045821756032608844
+horror,horror,0.045821756032608844
+smash,smash,0.045821756032608844
+avenge,land,0.13101844842417942
+fashion,fashion,0.045821756032608844
+ascetic. with marichas,ascetic. with,0.045821756032608844
+feet,feet,0.045821756032608844
+forest-,forest-,0.045821756032608844
+"headless monster,",headless,0.045821756032608844
+headless,"headless monster,",0.045821756032608844
+aid,aid,0.045821756032608844
+sita,sita,0.045821756032608844
+radiance,"radiance dimmed,",0.045821756032608844
+enjoy,enjoy,0.045821756032608844
+sugriva,sugriva,0.045821756032608844
+annihilate,annihilate,0.045821756032608844
+news,news,0.045821756032608844
+hut,hut empty,0.045821756032608844
+strict,strict guard,0.045821756032608844
+radiance,radiance,0.045821756032608844
+"vulture jatayus,","vulture jatayus,",0.045821756032608844
+ascetic.,"ascetic. with marichas aid,",0.045821756032608844
+justice,justice,0.045821756032608844
+wind,wind,0.045821756032608844
+"swallow sita,",swallow,0.045821756032608844
+ascetic. with marichas,ascetic. with marichas,0.045821756032608844
+hut empty,hut empty,0.045821756032608844
+lanka,khara,0.20521137765318487
+kabandha,kabandha,0.045821756032608844
+"ascetic. with marichas aid,",ascetic. with,0.045821756032608844
+encounter,encounter,0.045821756032608844
+earth,earth,0.045821756032608844
+golden,"golden chariot,",0.045821756032608844
+strict guard,strict,0.045821756032608844
+course,course,0.045821756032608844
+search,search,0.045821756032608844
+"swallow sita,","swallow sita,",0.045821756032608844
+shadow,forest,0.18119611828780116
+yield,yield,0.045821756032608844
+"bitter lament,",bitter,0.045821756032608844
+droop,droop,0.045821756032608844
+truth,truth,0.045821756032608844
+"ravanas chariot,","ravanas chariot,",0.045821756032608844
+fall,fall,0.045821756032608844
+borne,borne,0.045821756032608844
+"vulture jatayus,",vulture,0.045821756032608844
+"radiance dimmed,",radiance,0.045821756032608844
+rakshasas.,rakshasas. rama,0.045821756032608844
+forest- hermits,forest-,0.045821756032608844
+ascetic. with,ascetic. with,0.045821756032608844
+world,world,0.045821756032608844
+gain possession,gain,0.045821756032608844
+bitter,bitter,0.045821756032608844
+beauty,wife,1.0
+forest- hermits,forest- hermits,0.045821756032608844
+demon,demon,0.045821756032608844
+demon,demon catches,0.045821756032608844
+khara,lanka,0.20521137765318487
+hut,hut,0.045821756032608844
+pale,pale,0.045821756032608844
+uproot,uproot,0.045821756032608844
+ravanas,ravanas,0.045821756032608844
+hurl,hurl,0.045821756032608844
+rakshasas.,rakshasas.,0.045821756032608844
+monster,monster,0.045821756032608844
+hut empty,hut,0.045821756032608844
+lakshmana,full,0.10886449537809328
+chariot,friend,0.08862600334431966
+strict guard,strict guard,0.045821756032608844
+dont,dont,0.045821756032608844
+propelled,propelled,0.045821756032608844
+righteousness,righteousness,0.045821756032608844
+ground,forest,0.32052378865567693
+"radiance dimmed,","radiance dimmed,",0.045821756032608844
+"golden chariot,",golden,0.045821756032608844
+continue,continue,0.045821756032608844
+round,round,0.045821756032608844
+sky,sky,0.045821756032608844
+fill,fill,0.045821756032608844
+seem,seem,0.045821756032608844
+ascetic.,ascetic.,0.045821756032608844
+become,become,0.045821756032608844
+anger,anger,0.045821756032608844
+ascetic.,ascetic. with marichas,0.045821756032608844
+harem,harem,0.045821756032608844
+ogre,ogre,0.045821756032608844
+find,find,0.045821756032608844
+ogresses. meanwhile rama,ogresses. meanwhile rama,0.045821756032608844
+land,avenge,0.13101844842417942
+sight,sight,0.045821756032608844
+possession,wife,0.44758101665045774
+golden,golden,0.045821756032608844
+full,lakshmana,0.10886449537809328
+bitter,"bitter lament,",0.045821756032608844
+viradha,viradha,0.045821756032608844
+struggle,struggle,0.045821756032608844
+stay,stay,0.045821756032608844
+ogresses.,ogresses.,0.045821756032608844
+vulture,story,0.16910498242878555
+"ascetic. with marichas aid,",ascetic.,0.045821756032608844
+break,break,0.045821756032608844
+ogre falls,ogre,0.045821756032608844
+palace,palace,0.045821756032608844
+call,call,0.045821756032608844
+"ascetic. with marichas aid,","ascetic. with marichas aid,",0.045821756032608844
+ascetic. with marichas,"ascetic. with marichas aid,",0.045821756032608844
+sun,sun,0.045821756032608844
+ogresses. meanwhile,ogresses.,0.045821756032608844
+marichas,marichas,0.045821756032608844
+"marichas aid,",marichas,0.045821756032608844
+"twelve months,",twelve,0.045821756032608844
+gain,wife,0.4978009242276889
+twelve,twelve,0.045821756032608844
+ravana,ravana,0.045821756032608844
+breakfast,breakfast,0.045821756032608844
+rakshasas. rama,rakshasas. rama,0.045821756032608844
+friend,chariot,0.08862600334431966
+gain possession,gain possession,0.045821756032608844
+"her. enraged,",her.,0.045821756032608844
+overcome,overcome,0.045821756032608844
+guard,guard,0.045821756032608844
+strict,strict,0.045821756032608844
+ogresses.,ogresses. meanwhile rama,0.045821756032608844
+release,release,0.045821756032608844
+ogre,ogre falls,0.045821756032608844
+ascetic. with marichas,ascetic.,0.045821756032608844
+wife,beauty,1.0
+lament,lament,0.045821756032608844
+swallow,lakshmana,0.06473457783625416
+vain,vain,0.045821756032608844
+nose,lakshmana,0.0836473996398995
+forest,ground,0.32052378865567693
+her.,"her. enraged,",0.045821756032608844
+marichi,marichi,0.045821756032608844
+none,none,0.045821756032608844
+rage,lakshmana,0.09625594750899638
+ascetic. with,ascetic. with marichas,0.045821756032608844
+"ascetic. with marichas aid,",ascetic. with marichas,0.045821756032608844
+dandaka,dandaka,0.045821756032608844
+ascetic. with,ascetic.,0.045821756032608844
+slip,slip,0.045821756032608844
+innocence,innocence,0.045821756032608844
+moan,moan,0.045821756032608844
+south,south,0.045821756032608844
+"her. enraged,","her. enraged,",0.045821756032608844
+story,vulture,0.16910498242878555
+another.,reign,0.3981552810444913
+everyone lives,everyone lives,0.08766809486693962
+hostile,hostile,0.08766809486693962
+queen,queen,0.08766809486693962
+vasishtha,appoint,0.1285050583259717
+pati-vrata,firm,0.1930455641150784
+sleep,sleep,0.08766809486693962
+"ramas feet,","ramas feet,",0.08766809486693962
+order,death,0.6318203237846661
+uneasy,uneasy sleep,0.08766809486693962
+"dasharathas court,",dasharathas,0.08766809486693962
+come,come,0.08766809486693962
+forest,forest,0.08766809486693962
+depart,decision,0.14200335244801116
+regret,regret,0.08766809486693962
+existence,speech,0.15709647955386438
+mourned. king,mourned.,0.08766809486693962
+curse had,curse,0.08766809486693962
+eloquent,firm,0.24573429873914776
+brother.,heard,0.37745613529932126
+feet,feet,0.08766809486693962
+embrace,embrace,0.08766809486693962
+attack,attack,0.08766809486693962
+age,appoint,0.12716298253503747
+eloquent speech,eloquent,0.08766809486693962
+wife,dasharathas,0.17474730620230447
+departure,departure,0.08766809486693962
+mistake,mistake,0.08766809486693962
+mind,mind,0.08766809486693962
+symbol,ayodhya,0.2189783006878625
+place,place,0.08766809486693962
+transitoriness,speech,0.13725979821474302
+wilderness,dasharatha,0.39177872991129303
+mistress,mistress,0.08766809486693962
+"father. rama,",father.,0.08766809486693962
+"another. now bharata,",another. now,0.08766809486693962
+bark,dasharatha,0.7393337413905541
+reclaim,reclaim,0.08766809486693962
+father,father,0.08766809486693962
+world,world,0.08766809486693962
+dissuade,dissuade,0.08766809486693962
+retinue,heard,0.4354137433857975
+curse,curse,0.08766809486693962
+consecration,appoint,0.25354662307295056
+vain,help,0.19496212311944275
+queen,queen kaikeyi,0.08766809486693962
+ayodhya mourned. king,ayodhya mourned. king,0.08766809486693962
+blind father,blind,0.08766809486693962
+mourned. king dasharatha,mourned.,0.08766809486693962
+queen kaikeyi,queen kaikeyi,0.08766809486693962
+sita,sita,0.08766809486693962
+dharma,dharma,0.08766809486693962
+country,sovereignty,0.8192535272977959
+landscape,heard,0.2532612608283005
+dispel,dispel,0.08766809486693962
+bear,dasharatha,0.2180012241716625
+kind,kind,0.08766809486693962
+son,son,0.08766809486693962
+satyavan,satyavan,0.08766809486693962
+throne,throne,0.08766809486693962
+priest,priest,0.08766809486693962
+speech,death,0.580599347641913
+libation,libation,0.08766809486693962
+"dasharathas court,","dasharathas court,",0.08766809486693962
+consent,consent,0.08766809486693962
+"dissuade him,",dissuade,0.08766809486693962
+blind,blind,0.08766809486693962
+fail change,fail,0.08766809486693962
+"another. now bharata,",another.,0.08766809486693962
+prevent,firm,0.18175512098134924
+kaikeyi,ascend,0.8348201507503578
+fail change,fail change,0.08766809486693962
+unreasonable.,speech,0.2661982269190319
+uneasy sleep,uneasy sleep,0.08766809486693962
+seem,seem,0.08766809486693962
+nothing,firm,0.189282083070502
+"mother kaikeyi,","mother kaikeyi,",0.08766809486693962
+dasharatha,royalty,1.0
+royal,ascend,0.10742637035096564
+manage,sovereignty,0.7254605231399939
+"hostile attack,",hostile,0.08766809486693962
+another. now,another.,0.08766809486693962
+curse,curse had,0.08766809486693962
+nandigrama,sovereignty,0.6129089181506313
+husband,husband,0.08766809486693962
+livelihood,livelihood,0.08766809486693962
+matter,matter,0.08766809486693962
+beyond,beyond,0.08766809486693962
+another. now,"another. now bharata,",0.08766809486693962
+youth,youth,0.08766809486693962
+heard,retinue,0.4354137433857975
+"ramas banishment,",ramas,0.08766809486693962
+bharata,bharata,0.08766809486693962
+follow,follow,0.08766809486693962
+blind father,blind father,0.08766809486693962
+lament,lament,0.08766809486693962
+firm,eloquent,0.24573429873914776
+father.,"father. rama,",0.08766809486693962
+conduct,conduct,0.08766809486693962
+noise,heard,0.1373460446553479
+"another. now bharata,","another. now bharata,",0.08766809486693962
+ayodhya mourned. king dasharatha,ayodhya mourned. king,0.08766809486693962
+banishment,ramas,0.20865824886917847
+fulfilled. after,fulfilled. after,0.08766809486693962
+begin,another.,0.37745613529932126
+distance,heard,0.16218501954955206
+uneasy,uneasy,0.08766809486693962
+curse had,curse had,0.08766809486693962
+separation,dasharatha,0.3048899770414778
+ayodhya,representative.,0.8192535272977959
+conduct,conduct affairs,0.08766809486693962
+"royal counselors,",royal,0.08766809486693962
+ayodhya mourned. king dasharatha,ayodhya mourned. king dasharatha,0.08766809486693962
+loss,loss,0.08766809486693962
+yama,yama,0.08766809486693962
+"dissuade him,","dissuade him,",0.08766809486693962
+mourned. king dasharatha,mourned. king,0.08766809486693962
+woman,firm,0.21938993142711305
+trouble,trouble,0.08766809486693962
+ramas,banishment,0.20865824886917847
+grief,grief,0.08766809486693962
+everyone lives,everyone,0.08766809486693962
+uneasy sleep,uneasy,0.08766809486693962
+wilderness.,firm,0.1478837915801618
+"chitrakuta hills,",chitrakuta,0.08766809486693962
+dear,decision,0.2687856201371781
+magnificent speech,magnificent,0.08766809486693962
+hostile,"hostile attack,",0.08766809486693962
+elevation,elevation,0.08766809486693962
+everyone,everyone lives,0.08766809486693962
+"brother. meanwhile,","brother. meanwhile,",0.08766809486693962
+consult,consult,0.08766809486693962
+midnight,midnight,0.08766809486693962
+underworld,underworld,0.08766809486693962
+royalty,dasharatha,1.0
+return,reign,0.12906638635727985
+conduct affairs,conduct affairs,0.08766809486693962
+resolve,resolve,0.08766809486693962
+fail,fail,0.08766809486693962
+"royal counselors,","royal counselors,",0.08766809486693962
+representative.,sovereignty,0.9130465314555979
+tree,tree,0.08766809486693962
+"chitrakuta hills,","chitrakuta hills,",0.08766809486693962
+find,find,0.08766809486693962
+decision,reproach,0.5766854130965836
+ascend,kaikeyi,0.8348201507503578
+court,court,0.08766809486693962
+talk,talk,0.08766809486693962
+appoint,consecration,0.25354662307295056
+"brother. meanwhile,",brother.,0.08766809486693962
+mourned.,dasharatha,0.1745568477367549
+mother,reign,0.21738331508193032
+change,change,0.08766809486693962
+crime,crime,0.08766809486693962
+residence,sovereignty,0.5753917164875104
+mourned. king dasharatha,mourned. king dasharatha,0.08766809486693962
+blind,blind father,0.08766809486693962
+spread,spread,0.08766809486693962
+"ramas banishment,","ramas banishment,",0.08766809486693962
+serve,serve,0.08766809486693962
+jabali,jabali,0.08766809486693962
+father.,father.,0.08766809486693962
+"father. rama,","father. rama,",0.08766809486693962
+sovereignty,representative.,0.9130465314555979
+mourned. king,mourned. king dasharatha,0.08766809486693962
+magnificent speech,magnificent speech,0.08766809486693962
+conduct affairs,conduct,0.08766809486693962
+dasharathas,wife,0.17474730620230447
+"hostile attack,","hostile attack,",0.08766809486693962
+rajagriha,ascend,0.20621774777109575
+secure,secure,0.08766809486693962
+chitrakuta,heard,0.3277781855109129
+uncertain,uncertain,0.08766809486693962
+end,end,0.08766809486693962
+dead,dead,0.08766809486693962
+capital,ascend,0.1732872886310524
+mourned. king,mourned. king,0.08766809486693962
+savitri,savitri,0.08766809486693962
+"age approaching,",age,0.08766809486693962
+wherever,wherever,0.08766809486693962
+fulfilled.,ascend,0.29183694153520845
+duty,duty,0.08766809486693962
+fulfilled. after,fulfilled.,0.08766809486693962
+wilderness. rama,wilderness.,0.08766809486693962
+kausalya,kausalya,0.08766809486693962
+grant,grant,0.08766809486693962
+ayodhya mourned. king,ayodhya mourned. king dasharatha,0.08766809486693962
+guilty,guilty,0.08766809486693962
+magnificent,speech,0.09758643553650029
+another. now,another. now,0.08766809486693962
+dissuade,"dissuade him,",0.08766809486693962
+fail,fail change,0.08766809486693962
+everyone,everyone,0.08766809486693962
+help,vain,0.19496212311944275
+wilderness. rama,wilderness. rama,0.08766809486693962
+awoke,awoke,0.08766809486693962
+reproach,decision,0.5766854130965836
+word,word,0.08766809486693962
+spend,decision,0.12389159992098732
+lakshmana,lakshmana,0.08766809486693962
+bharata drawing,bharata drawing,0.08766809486693962
+man,man,0.08766809486693962
+inevitability,speech,0.18685150156254643
+eloquent speech,eloquent speech,0.08766809486693962
+father had,father had,0.08766809486693962
+sovereignty belongs,sovereignty belongs,0.08766809486693962
+reign,another.,0.3981552810444913
+death,order,0.6318203237846661
+"age approaching,","age approaching,",0.08766809486693962
+queen kaikeyi,queen,0.08766809486693962
+persistent,persistent,0.10135825399353898
+advisor,advisor urged,0.10135825399353898
+childless,childless,0.10135825399353898
+offer,court,0.1691071197478572
+horse-sacrifice was,horse-sacrifice was,0.10135825399353898
+bent,bent,0.10135825399353898
+sumitra,sumitra,0.10135825399353898
+daughter,daughter,0.10135825399353898
+"sage rishyashringa,","sage rishyashringa,",0.10135825399353898
+mighty,mighty,0.10135825399353898
+demon,demon,0.10135825399353898
+lakshmana,kaikeyi,0.1031632847280952
+"lift it,",lift,0.10135825399353898
+everything.,everything. when,0.10135825399353898
+sage,cause,0.16357191333244783
+ayodhya.,ayodhya.,0.10135825399353898
+ramas,ramas,0.10135825399353898
+"lord vishnu,","lord vishnu,",0.10135825399353898
+marriage,marriage,0.10135825399353898
+come,come,0.10135825399353898
+sacrifice,sage,0.1324650836629934
+field,field,0.10135825399353898
+human form,human form,0.10135825399353898
+vishnu,vishnu,0.10135825399353898
+lanka,lanka,0.10135825399353898
+priest,priest,0.10135825399353898
+kosalas,kosalas,0.10135825399353898
+kaikeyi,lakshmana,0.1031632847280952
+hermitage,hermitage,0.10135825399353898
+defeat,defeat,0.10135825399353898
+slay,forth,0.2856950224051207
+videha,vishvamitra,1.0
+court,horse-sacrifice,0.2172554016977516
+fit,bow,0.16280384346406623
+offering rite,offering rite,0.10135825399353898
+youth,youth,0.10135825399353898
+offering rite,offering,0.10135825399353898
+earth,earth,0.10135825399353898
+manhood,manhood,0.10135825399353898
+wife,wife,0.10135825399353898
+"turn came,","turn came,",0.10135825399353898
+turn,turn,0.10135825399353898
+come forth,come forth,0.10135825399353898
+worship,worship,0.10135825399353898
+everything. when,everything.,0.10135825399353898
+man,man,0.10135825399353898
+bow,god,0.34714061187564793
+"turn came,",turn,0.10135825399353898
+lord,"lord vishnu,",0.10135825399353898
+elder,elder,0.10135825399353898
+sita,sita,0.10135825399353898
+elder brother,elder,0.10135825399353898
+chief,sage,0.11518351162440761
+form,form,0.10135825399353898
+elder,elder brother,0.10135825399353898
+chief priest,chief,0.10135825399353898
+"sage rishyashringa,",sage,0.10135825399353898
+chief priest,chief priest,0.10135825399353898
+offering,sage,0.1497466557015792
+"lift it,","lift it,",0.10135825399353898
+forth,request,0.3317792145080161
+come forth,come,0.10135825399353898
+eldest,eldest,0.10135825399353898
+shatrughna,shatrughna,0.10135825399353898
+order,ravana,0.32264155374821174
+vishvamitra,videha,1.0
+lift,lift,0.10135825399353898
+draw,draw,0.10135825399353898
+cause,sage,0.16357191333244783
+human,human form,0.10135825399353898
+question,question,0.10135825399353898
+ravana,order,0.32264155374821174
+time,time,0.10135825399353898
+ate,ate,0.10135825399353898
+"lord vishnu,",lord,0.10135825399353898
+persistent attacks,persistent attacks,0.10135825399353898
+wise,wise,0.10135825399353898
+safter,safter,0.10135825399353898
+fire,fire,0.10135825399353898
+janaka,janaka,0.10135825399353898
+lift,"lift it,",0.10135825399353898
+court advisor,court advisor,0.10135825399353898
+advisor urged,advisor,0.10135825399353898
+elder brother,elder brother,0.10135825399353898
+everything.,everything.,0.10135825399353898
+lord,lord,0.10135825399353898
+advisor,advisor,0.10135825399353898
+human form,human,0.10135825399353898
+ayodhya,land,0.15030029642310364
+persistent,persistent attacks,0.10135825399353898
+god,bow,0.34714061187564793
+dasharatha,dasharatha,0.10135825399353898
+persistent attacks,persistent,0.10135825399353898
+horse-sacrifice,court,0.2172554016977516
+grown,grown,0.10135825399353898
+turn,"turn came,",0.10135825399353898
+bharata,lakshmana,0.1024412724342727
+son,son,0.10135825399353898
+land,ayodhya,0.15030029642310364
+marry,marry,0.10135825399353898
+kausalya,kausalya,0.10135825399353898
+city,city,0.10135825399353898
+come,come forth,0.10135825399353898
+advisor urged,advisor urged,0.10135825399353898
+daughter named,daughter named,0.10135825399353898
+human,human,0.10135825399353898
+everything. when,everything. when,0.10135825399353898
+furrow,furrow,0.10135825399353898
+court advisor,court,0.10135825399353898
+rishyashringa,sage,0.10481456840125615
+request,forth,0.3317792145080161
+born,born,0.10135825399353898
+pity,pity,1.0
+forest,forest,1.0
 form,form,1.0
-veda,veda,1.0
-part,part,1.0
-upanishadas,upanishadas,1.0
-date,date,1.0
-man,man,1.0
-veda,veda,1.0
-vedas,text,0.8675448282150169
-beginning,text,1.0
-god,god,0.806803643292934
-text,beginning,1.0
-creation,creation,0.806803643292934
-vayu,competent,1.0
-agni,agni,0.6990857653787711
-angiras,angiras,0.6990857653787711
-aditya,rishis,0.7759974831322309
-rishis,aditya,0.7759974831322309
-competent,vayu,1.0
-revelation.,revelation.,1.0
-yajurveda,yajurveda,1.0
-vedas,vedas,1.0
-26-2,26-2,1.0
-universal^,universal^,1.0
-vedic,vedic,1.0
-preach,preach,1.0
-vaishyas,vaishyas,0.9910708322965777
-shudras,brahmanas,1.0
-kshatriyas,kshatriyas,0.9910708322965777
-brahmanas,shudras,1.0
-chandalas,chandalas,0.9910708322965777
-dwijas,dwijas,1.0
-forlorn,forlorn,1.0
-twice-born,twice-born,1.0
-vedas,vedas,1.0
-study,study,1.0
-aylush,aylush,0.9208272235288844
-vedas,vedas,0.9208272235288844
-read,seer,1.0
-30,30,0.9208272235288844
-seer,read,1.0
-aitareya brahmana,aitareya,0.7795874544805531
-shudra,brahmana,1.0
-aitareya,aitareya,0.7795874544805531
-11-19,11-19,0.7795874544805531
-brahmana,shudra,1.0
-aitareya brahmana,aitareya brahmana,0.7795874544805531
-aitareya,aitareya brahmana,0.7795874544805531
-birth,birth,0.7795874544805531
-vide,vide,0.7795874544805531
-lopa,lopa,0.7795874544805531
-mudra,mudra,1.0
-vedic,vedic,1.0
-vedic,vedic,1.0
-god,god,1.0
-mankind,mankind,1.0
-portion,portion,1.0
-veda,veda,1.0
-study,study,1.0
-god,god,1.0
-water,water,1.0
-sunshine,sunshine,1.0
-vedic,vedic,1.0
-knowledge,knowledge,1.0
-church,church none,1.0
-church none,church none,1.0
-church none,church,1.0
-church,church,1.0
-none,none,1.0
-mankind.,conduce,1.0
-amelioration,amelioration,0.5034573896121571
-prosperity,prosperity,0.5034573896121571
-conduce,mankind.,1.0
-vedic,vedic seer,1.0
-vedic seer,vedic,1.0
-bhoomananda,"bhoomananda saraswati,",1.0
-"bhoomananda saraswati,","bhoomananda saraswati,",1.0
-vedic seer,vedic seer,1.0
-vedic,vedic,1.0
-"bhoomananda saraswati,",bhoomananda,1.0
-saraswati,saraswati,1.0
-bhoomananda,bhoomananda,1.0
-seer,seer,1.0
+hunter,hunter,1.0
+hunter came,hunter came,1.0
 poet,poet,1.0
-poetry,poetry,1.0
-prophet,prophet,1.0
-prophecy,prophecy,1.0
-something beyond,something,1.0
-mystery,mystery,1.0
-something,something,1.0
-something,something beyond,1.0
-compre-,compre-,1.0
-term,term,1.0
-something beyond,something beyond,1.0
-nature,nature,1.0
-order,order,1.0
-something,something,1.0
-hension,hension,1.0
-parlance,parlance,0.953302811202691
-spiritist parlance,spiritist,0.953302811202691
-spiritist,spiritist parlance,0.953302811202691
-spiritist,spiritist,0.953302811202691
-spiritist parlance,spiritist parlance,0.953302811202691
-sight,seer,1.0
-vedic,vedic,0.953302811202691
-seer,sight,1.0
-incoherent,incoherent,0.6793370088291365
-state-,seer,0.7063075187983363
-rishi,number,0.7552237754837228
-incoherent state-,incoherent state-,0.6793370088291365
-number,seer,1.0
-seer,number,1.0
-incoherent,incoherent state-,0.6793370088291365
-incoherent state-,incoherent,0.6793370088291365
-person,person,0.6793370088291365
-"""revelation""","""revelation""",1.0
-significance,significance,1.0
-fa vedic seer,fa vedic seer,0.8983819341141874
-vedic,vedic seer,0.8983819341141874
-fa,fa vedic seer,0.8983819341141874
-new testament,new testament,0.8983819341141874
-rishi,rishi,0.8983819341141874
-new,seer,1.0
-fa vedic,fa,0.8983819341141874
-fa vedic,fa vedic,0.8983819341141874
-fohn,fohn,0.8983819341141874
-vedic seer,vedic,0.8983819341141874
-testament,new,0.9237864505856406
-seer,new,1.0
-vedic seer,vedic seer,0.8983819341141874
-vedic,vedic,0.8983819341141874
-fa,fa vedic,0.8983819341141874
-fa vedic,fa vedic seer,0.8983819341141874
-new testament,new,0.8983819341141874
-fa vedic seer,fa vedic,0.8983819341141874
-fa vedic seer,fa,0.8983819341141874
-fa,fa,0.8983819341141874
-introduction,introduction,1.0
-"person who,",person,0.8338121499723227
-"person who,","person who,",0.8338121499723227
-person,"person who,",0.8338121499723227
-divine revelation,divine,0.8338121499723227
-revelation,revelation,0.8338121499723227
-person,person,0.8338121499723227
-recipient,divine,0.8725443537358517
-divine,medium,1.0
-divine revelation,divine revelation,0.8338121499723227
-medium,divine,1.0
-grasp,grasp,1.0
-pure,pure,1.0
-divine,divine,1.0
-life,life,1.0
-mankind,mankind,1.0
-generality,generality,1.0
-sir,sir,1.0
-sir,sir oliver,1.0
-sir oliver,sir,1.0
-sir oliver,sir oliver,1.0
-ken,ken,1.0
-oliver,oliver,1.0
-lodge,lodge,1.0
-humanity.',humanity.',1.0
-swami,swami dayananda,1.0
-aravinda ghosha,aravinda ghosha,1.0
-dayananda,dayananda,1.0
-ghosha,ghosha,1.0
-swami dayananda,swami dayananda,1.0
-swami,swami,1.0
-aravinda,aravinda,1.0
-swami dayananda,swami,1.0
-aravinda,aravinda ghosha,1.0
-aravinda ghosha,aravinda,1.0
-vedic,vedic,1.0
-interpretation.,interpretation.,1.0
-appear,appear,1.0
-company,company,1.0
-eye,eye,1.0
-posterity,posterity,1.0
-ranaissance,ranaissance,1.0
-head,head,1.0
-unique,unique,1.0
-distinctness,distinctness,1.0
-peculiar,peculiar,1.0
-work-,work-,1.0
-type,type,1.0
-impression,impression created,1.0
-impression created,impression created,1.0
-impression created,impression,1.0
-impression,impression,1.0
-unique,unique,1.0
-mind,mind,1.0
-dayananda.,dayananda.,1.0
-puissant renovator,puissant renovator,1.0
-renovator,renovator,1.0
-birth,birth,1.0
-kathiawar,kathiawar,1.0
-puissant renovator,puissant,1.0
-puissant,puissant renovator,1.0
-puissant,puissant,1.0
-something,temperament,1.0
-temperament,something,1.0
-soul,soul,0.6320371060225194
-new-creator,new-creator,0.6320371060225194
-humanity,humanity,0.6720856291043601
-land,spirit,1.0
-spirit,land,1.0
-land entered,land,0.6720856291043601
-land entered,land entered,0.6720856291043601
-something,something,0.6720856291043601
-unspoilt stuff,unspoilt,0.9327451457726296
-stuff,stuff,0.9327451457726296
-unspoilt stuff,unspoilt stuff,0.9327451457726296
-nature,nature,0.9327451457726296
-unspoilt,virgin,1.0
-virgin,unspoilt,1.0
-instinct,instinct,1.0
-body,body,1.0
-force,force,1.0
-nature,nature,1.0
-creation.,creation.,1.0
-sentiment,sentiment,1.0
-seek,seek,1.0
-account,account,1.0
-precise form,precise,0.8578699469276112
-precise,precise form,0.8578699469276112
-precise,precise,0.8578699469276112
-precise form,precise form,0.8578699469276112
-form,form,0.8578699469276112
-find,impression,1.0
-impression,find,1.0
-mark,mark,1.0
-work,work,1.0
-life,life,1.0
-india,india,1.0
-sort,sort,1.0
-today,today,1.0
-race,race,1.0
-material,material,1.0
-infusion,infusion,1.0
-indeterminate,indeterminate,1.0
-settle,settle,1.0
-mass,mass,1.0
-day settle,day settle,1.0
-day,day settle,1.0
-indeterminate mass,indeterminate,1.0
-fluent,fluent,1.0
-indeterminate,indeterminate mass,1.0
-day settle,day,1.0
-consis-,consis-,1.0
-indeterminate mass,indeterminate mass,1.0
-day,day,1.0
-nature,nature,1.0
-tency,tency,1.0
-appear,appear,1.0
-birth,birth,1.0
+mate,mate,1.0
+curse left,curse left,1.0
+grass,grass,1.0
+river,river,1.0
+overcome,overcome,1.0
+mouth,mouth,1.0
+brahma,brahma,1.0
+bank,bank,1.0
+curse left,curse,1.0
+meter.,meter.,1.0
+blood,blood,1.0
+bird,bird,1.0
+curse,curse,1.0
+bade,bade,1.0
+arrow,arrow,1.0
+valmiki,valmiki,1.0
+god,god,1.0
+bird was,bird was,1.0
+curse,curse left,1.0
+"vindhya hills,","vindhya hills,",0.07504487812560437
+sugriva,angada,1.0
+friendship,friendship,0.07504487812560437
+sea,sea,0.07504487812560437
+lake,lake,0.07504487812560437
+form,form,0.07504487812560437
+distant,distant,0.07504487812560437
+aid,aid,0.07504487812560437
+vindhya,"vindhya hills,",0.07504487812560437
+spring,spring,0.07504487812560437
+coast,coast,0.07504487812560437
+ravana,ravana,0.07504487812560437
+kingdom,kingdom,0.07504487812560437
+jatayus,jatayus,0.07504487812560437
+"lake pampa,",lake,0.07504487812560437
+"vindhya hills,",vindhya,0.07504487812560437
+mahendra,mahendra,0.07504487812560437
+man,man,0.07504487812560437
+residence,residence,0.07504487812560437
+limitless,limitless,0.07504487812560437
+"meet sampati,","meet sampati,",0.07504487812560437
+dominion,dominion,0.07504487812560437
+race,race,0.07504487812560437
+set,set,0.07504487812560437
+"vulture jatayus,","vulture jatayus,",0.07504487812560437
+leap,leap,0.07504487812560437
+sampati,sampati,0.07504487812560437
+throne. among,throne. among,0.07504487812560437
+host,host,0.07504487812560437
+pampa,pampa,0.07504487812560437
+ravana carrying,ravana carrying,0.07504487812560437
+throne. among,throne.,0.07504487812560437
+accompanied,accompanied,0.07504487812560437
+ravana carrying,ravana,0.07504487812560437
+vulture,"vulture jatayus,",0.07504487812560437
+distant loved,distant loved,0.07504487812560437
+hanuman,hanuman,0.07504487812560437
+"mount mahendra,","mount mahendra,",0.07504487812560437
+leadership,leadership,0.07504487812560437
+bond,bond,0.07504487812560437
+ocean.,ocean.,0.07504487812560437
+meet,meet,0.07504487812560437
+mount,mount,0.07504487812560437
+reach,reach,0.07504487812560437
+helpless,helpless,0.07504487812560437
+snake,snake,0.07504487812560437
+confidence,confidence,0.07504487812560437
+flown,flown,0.07504487812560437
+wife,wife,0.07504487812560437
+nature,nature,0.07504487812560437
+valin,valin,0.07504487812560437
+lake,"lake pampa,",0.07504487812560437
+angry,angry,0.07504487812560437
+battle,battle,0.07504487812560437
+vindhya,vindhya,0.07504487812560437
+angada,sugriva,1.0
+lanka,lanka,0.07504487812560437
+ravana,ravana carrying,0.07504487812560437
+distant loved,distant,0.07504487812560437
+monkey armies,monkey,0.07504487812560437
+throne.,throne. among,0.07504487812560437
+wisest,wisest,0.07504487812560437
+distant,distant loved,0.07504487812560437
+throne.,throne.,0.07504487812560437
+find,find,0.07504487812560437
+discussion,discussion,0.07504487812560437
+monkey,monkey,0.07504487812560437
+support,support,0.07504487812560437
+snake kills,snake kills,0.07504487812560437
+sugrivas,sugrivas,0.07504487812560437
+kishkindha,kishkindha,0.07504487812560437
+sita,sita,0.07504487812560437
+mount,"mount mahendra,",0.07504487812560437
+"lake pampa,","lake pampa,",0.07504487812560437
+child,child,0.07504487812560437
+south,south,0.07504487812560437
+"vulture jatayus,",vulture,0.07504487812560437
+funk,funk,0.07504487812560437
+son,son,0.07504487812560437
+vulture,vulture,0.07504487812560437
+monkey,monkey armies,0.07504487812560437
+snake kills,snake,0.07504487812560437
+monkey armies,monkey armies,0.07504487812560437
+snake,snake kills,0.07504487812560437
+"mount mahendra,",mount,0.07504487812560437
+search,grief,1.0
+"mighty leap,","mighty leap,",0.20526277574917826
+hill,hill,0.20526277574917826
+"whole city,",whole,0.20526277574917826
+sunset,sunset,0.20526277574917826
+palace,ravana,0.24907252430734855
+grief,search,1.0
+monkey,mighty,0.2177373689431545
+town,town,0.20526277574917826
+flew,mighty,0.2218955666744799
+beloved.,beloved.,0.20526277574917826
+mighty,flew,0.2218955666744799
+ravanas,ravanas,0.20526277574917826
+city,ravana,0.4527858660756027
+chariot,chariot,0.20526277574917826
+mahendra hill,mahendra,0.20526277574917826
+flight,flight,0.20526277574917826
+leap,mighty,0.20585680399651046
+mahendra hill,mahendra hill,0.20526277574917826
+hanuman,hanuman,0.20526277574917826
+hill,mighty,0.20823291698583926
+messenger,messenger,0.20526277574917826
+midst,midst,0.20526277574917826
+ravana,city,0.4527858660756027
+harem,harem,0.20526277574917826
+ravanas,"ravanas harem,",0.20526277574917826
+news,news,0.20526277574917826
+whole,ravana,0.314787147144604
+known,known,0.20526277574917826
+save,save,0.20526277574917826
+mahendra,mighty,0.20763888873850703
+rescue,rescue,0.20526277574917826
+pushpaka,city,0.23920724702530408
+"ravanas harem,","ravanas harem,",0.20526277574917826
+friend,friend,0.20526277574917826
+lanka,lanka,0.20526277574917826
+"ravanas harem,",ravanas,0.20526277574917826
+everything,everything,0.20526277574917826
+message,message,0.20526277574917826
+"mighty leap,",mighty,0.20526277574917826
+"whole city,","whole city,",0.20526277574917826
+sita,sita,0.20526277574917826
+downcast glance,downcast,0.012507813504640197
+valmiki,valmiki,0.012507813504640197
+protection,protection,0.012507813504640197
+purify,oath,0.10419162762427263
+kusha,kusha,0.012507813504640197
+arrange,purify,0.046608556788901245
+river,river,0.012507813504640197
+birth,hermitage,0.02127657606345018
+"mother earth,","mother earth,",0.012507813504640197
+solemn,"solemn speech,",0.012507813504640197
+vishnu.,vishnu.,0.012507813504640197
+word,throne,1.0
+lava. several,lava. several,0.012507813504640197
+lava. several,lava.,0.012507813504640197
+"solemn speech,","solemn speech,",0.012507813504640197
+goddess,earth,0.04297937503374794
+throne,word,1.0
+day,day,0.012507813504640197
+desert,desert,0.012507813504640197
+pure,pure,0.012507813504640197
+borne,word,0.42048652113285573
+lap,lap,0.012507813504640197
+time,time,0.012507813504640197
+lute,sita,0.06232100741216298
+recitation,recitation,0.012507813504640197
+disapproval,disapproval,0.012507813504640197
+hermitage,pass,0.03881410118107015
+horse-sacrifice,horse-sacrifice,0.012507813504640197
+ravana,ravana,0.012507813504640197
+become,become,0.012507813504640197
+mother,mother,0.012507813504640197
+known,known,0.012507813504640197
+sita,poem,0.13704079827344715
+downcast glance,downcast glance,0.012507813504640197
+become,become pupils,0.012507813504640197
+"deep grief,","deep grief,",0.012507813504640197
+latter,latter,0.012507813504640197
+morning,morning,0.012507813504640197
+account,account,0.012507813504640197
+pass,hermitage,0.03881410118107015
+mother,"mother earth,",0.012507813504640197
+"solemn speech,",solemn,0.012507813504640197
+land,land,0.012507813504640197
+latter,latter delivers,0.012507813504640197
+vain,vain,0.012507813504640197
+god,god,0.012507813504640197
+latter delivers,latter delivers,0.012507813504640197
+ramayana,ramayana,0.012507813504640197
+poem,sita,0.13704079827344715
+man,man,0.012507813504640197
+forest,forest,0.012507813504640197
+fate,fate,0.012507813504640197
+grown,grown,0.012507813504640197
+earth,goddess,0.04297937503374794
+downcast,downcast glance,0.012507813504640197
+bard,bard,0.012507813504640197
+"oath finished,","oath finished,",0.012507813504640197
+bear,bear,0.012507813504640197
+thereupon,thereupon rama,0.012507813504640197
+thereupon,thereupon,0.012507813504640197
+reproach,reproach,0.012507813504640197
+earth,word,0.38910354362299304
+glance,glance,0.012507813504640197
+hope,hope,0.012507813504640197
+government,government,0.012507813504640197
+abduction,abduction,0.012507813504640197
+deep,"deep grief,",0.012507813504640197
+truth,throne,0.29772681492164066
+find,find,0.012507813504640197
+innocent,innocent,0.012507813504640197
+lava,lava,0.012507813504640197
+heart,heart,0.012507813504640197
+latter delivers,latter,0.012507813504640197
+solemn,solemn,0.012507813504640197
+present,present,0.012507813504640197
+lava.,hermitage,0.030045338622260165
+grief,grief,0.012507813504640197
+become pupils,become pupils,0.012507813504640197
+model,model,0.012507813504640197
+speech,speech,0.012507813504640197
+downcast,downcast,0.012507813504640197
+"deep grief,",deep,0.012507813504640197
+arose,arose,0.012507813504640197
+thereupon rama,thereupon,0.012507813504640197
+chariot,chariot,0.012507813504640197
+oath,purify,0.10419162762427263
+submission,submission,0.012507813504640197
+rapture,rapture,0.012507813504640197
+deep,deep,0.012507813504640197
+become pupils,become,0.012507813504640197
+"mother earth,",mother,0.012507813504640197
+lead,lead,0.012507813504640197
+example,example,0.012507813504640197
+bank,bank,0.012507813504640197
+effect,effect,0.012507813504640197
+lakshmana,lakshmana,0.012507813504640197
+thereupon rama,thereupon rama,0.012507813504640197
+spoken,spoken,0.012507813504640197
+accompaniment,sita,0.09968090284280506
+brahma,brahma,0.012507813504640197
+lie,lie,0.012507813504640197
+whole affair,whole affair,0.017983284264750585
+horrified,horrified,0.017983284264750585
+people. now,people. now,0.017983284264750585
+people. now rama,people. now,0.017983284264750585
+heart,heart,0.017983284264750585
+command,command,0.017983284264750585
+whole,fragrance,1.0
+ayodhya,bharata,0.08078593320710675
+death,lakshmana,0.0606869363360601
+rakshasas. ravana,rakshasas. ravana,0.017983284264750585
+son,angada,0.2668200991116916
+mount,"mount kailasa,",0.017983284264750585
+victory,news,0.06637427897151568
+complaint,bitter,0.030358406367891572
+rakshasas. ravana,rakshasas.,0.017983284264750585
+innocence,shatrughna,0.3481934389416662
+monkey,latter,0.026021626615896853
+"solemn speech,",solemn,0.017983284264750585
+bitter complaint,bitter,0.017983284264750585
+"master builder vishvakarman,",master builder,0.017983284264750585
+head,head,0.017983284264750585
+shall,lanka,0.08713427104065258
+solemn,"solemn speech,",0.017983284264750585
+side,son,0.04563181924774403
+bridge,bridge,0.017983284264750585
+weapon created,weapon,0.017983284264750585
+fellow- combatants,fellow- combatants,0.017983284264750585
+place,place,0.017983284264750585
+palace,palace,0.017983284264750585
+"master builder vishvakarman,","master builder vishvakarman,",0.017983284264750585
+moment.,moment.,0.017983284264750585
+chief,chief,0.017983284264750585
+son indrajit,son indrajit,0.017983284264750585
+"city carrying,",city,0.017983284264750585
+suffer,suffer,0.017983284264750585
+violent,violent,0.017983284264750585
+chariot,come,0.23130436412266656
+welfare,welfare,0.017983284264750585
+people. now,people.,0.017983284264750585
+coast.,lanka,0.04761942145442287
+innocent,innocent,0.017983284264750585
+"fire god,","fire god,",0.017983284264750585
+divine,divine,0.017983284264750585
+time,time,0.017983284264750585
+fetch,fetch,0.017983284264750585
+latter,monkey,0.026021626615896853
+divine master builder,divine,0.017983284264750585
+thereupon rama,thereupon,0.017983284264750585
+ramas,ramas,0.017983284264750585
+ravanas town,ravanas town,0.017983284264750585
+worst,ravana,0.018735187150248047
+duel. furious,duel. furious,0.017983284264750585
+divine,divine master,0.017983284264750585
+"moment. thus,","moment. thus,",0.017983284264750585
+populace,populace,0.017983284264750585
+ravanas citadel,ravanas citadel,0.017983284264750585
+place. on,place.,0.017983284264750585
+jambavan,jambavan,0.017983284264750585
+day,day,0.017983284264750585
+solemn,solemn,0.017983284264750585
+master builder,master builder,0.017983284264750585
+master,"master builder vishvakarman,",0.017983284264750585
+virtue,speech,0.11186352090926842
+"ravanas brother,","ravanas brother,",0.017983284264750585
+coast. when,coast. when,0.017983284264750585
+"sitas innocence,",sitas,0.017983284264750585
+kailasa,kailasa,0.017983284264750585
+envy,ravana,0.018379022625538723
+enter amidst,enter amidst,0.017983284264750585
+vishvakarman,vishvakarman,0.017983284264750585
+speech,delusion,0.23988202542452003
+"mount kailasa,","mount kailasa,",0.017983284264750585
+magic arts,magic,0.017983284264750585
+ravana,hero,0.018972630166720926
+worst enemies,worst enemies,0.017983284264750585
+coast. when,coast.,0.017983284264750585
+"solemn speech,","solemn speech,",0.017983284264750585
+pure,pure,0.017983284264750585
+"ravanas heads,","ravanas heads,",0.017983284264750585
+lanka. now,lanka. now,0.017983284264750585
+rakshasa,rakshasa,0.017983284264750585
+"ramas command,","ramas command,",0.017983284264750585
+fire,fire,0.017983284264750585
+sugriva,sugriva,0.017983284264750585
+ignominy,ignominy,0.017983284264750585
+"fire god,",fire,0.017983284264750585
+ill-will,ravana,0.018458170297696346
+people. now rama,people. now rama,0.017983284264750585
+hero,ravana,0.018972630166720926
+duel,duel,0.017983284264750585
+divine master builder,divine master builder,0.017983284264750585
+enter,enter,0.017983284264750585
+march,lanka,0.0747858805449558
+wild,wild flight,0.017983284264750585
+send,news,0.16315626838504588
+son indrajit,son,0.017983284264750585
+wife,wife,0.017983284264750585
+duel.,duel.,0.017983284264750585
+woman,woman,0.017983284264750585
+enter,enter amidst,0.017983284264750585
+wild,wild,0.017983284264750585
+swoon,swoon,0.017983284264750585
+subjects.,subjects.,0.017983284264750585
+presence,news,0.14702593681612422
+sita,mountain,0.30313783883405804
+magic,magic arts,0.017983284264750585
+enter amidst,enter,0.017983284264750585
+lanka.,lanka.,0.017983284264750585
+nothing,bitter,0.2846162540913492
+nothing remained,nothing,0.017983284264750585
+moment.,"moment. thus,",0.017983284264750585
+god,god,0.017983284264750585
+lanka. now ravanas,lanka. now ravanas,0.017983284264750585
+news,send,0.16315626838504588
+city,sita,0.2467473105283664
+"sitas innocence,","sitas innocence,",0.017983284264750585
+sitas,innocence,0.026673025177300993
+ravanas citadel,ravanas,0.017983284264750585
+amidst,amidst,0.017983284264750585
+"city carrying,","city carrying,",0.017983284264750585
+"builder vishvakarman,","builder vishvakarman,",0.017983284264750585
+fellow-,son,0.1424016916882211
+flight,flight,0.017983284264750585
+fellow- combatants,fellow-,0.017983284264750585
+"mount kailasa,",mount,0.017983284264750585
+prominent fellow-,prominent,0.017983284264750585
+indra,aid,0.04546458990069126
+divine master,divine master,0.017983284264750585
+prominent fellow-,prominent fellow-,0.017983284264750585
+rakshasas.,rakshasas.,0.017983284264750585
+fate,speech,0.06065611910316779
+"ravanas side,","ravanas side,",0.017983284264750585
+divine master,divine master builder,0.017983284264750585
+wild flight,wild,0.017983284264750585
+ravanas,ravanas,0.017983284264750585
+lanka.,lanka. now,0.017983284264750585
+duel. furious,duel.,0.017983284264750585
+description,description,0.017983284264750585
+ravanas,ravanas citadel,0.017983284264750585
+lanka. now,lanka.,0.017983284264750585
+return,return,0.017983284264750585
+vast,lanka,0.06490716814839838
+battle,battle,0.017983284264750585
+citadel,citadel,0.017983284264750585
+sortie,sortie,0.017983284264750585
+rakshasas,rakshasas,0.017983284264750585
+"ramas aid,","ramas aid,",0.017983284264750585
+magic arts,magic arts,0.017983284264750585
+field,field,0.017983284264750585
+regard,speech,0.09479438697390154
+"monkey nala,",monkey,0.017983284264750585
+lanka,shall,0.08713427104065258
+master,master,0.017983284264750585
+indrajit,indrajit,0.017983284264750585
+lap,lap,0.017983284264750585
+rakshasas.,rakshasas. ravana,0.017983284264750585
+nothing remained,nothing remained,0.017983284264750585
+advice,advice,0.017983284264750585
+revenge,revenge,0.017983284264750585
+builder,builder,0.017983284264750585
+"monkey nala,","monkey nala,",0.017983284264750585
+bitter complaints,bitter complaints,0.017983284264750585
+fortification,fortification,0.017983284264750585
+mountain,sita,0.30313783883405804
+image,city,0.04799489934714728
+nala,nala,0.017983284264750585
+bitter,nothing,0.2846162540913492
+people. now rama,people.,0.017983284264750585
+worst enemies,worst,0.017983284264750585
+erect,bitter,0.14173450529616047
+town,town,0.017983284264750585
+vibhishana,vibhishana,0.017983284264750585
+divine master,divine,0.017983284264750585
+pyre,pyre,0.017983284264750585
+vast army,vast army,0.017983284264750585
+prominent,son,0.15622595917971782
+come,chariot,0.23130436412266656
+ravanas heart,ravanas heart,0.017983284264750585
+occasion,occasion,0.017983284264750585
+delusion,speech,0.23988202542452003
+witness,witness,0.017983284264750585
+lakshmana,death,0.0606869363360601
+lanka. now ravanas,lanka. now,0.017983284264750585
+people. now,people. now rama,0.017983284264750585
+shatrughna,innocence,0.3481934389416662
+order,order,0.017983284264750585
+weapon,weapon,0.017983284264750585
+angada,son,0.2668200991116916
+success,success,0.017983284264750585
+master builder,master,0.017983284264750585
+mount,mount,0.017983284264750585
+divine,divine master builder,0.017983284264750585
+people.,innocence,0.13963965704045633
+"ramas command,",ramas,0.017983284264750585
+lanka.,lanka. now ravanas,0.017983284264750585
+hanuman,hanuman,0.017983284264750585
+night,night,0.017983284264750585
+weapon created,weapon created,0.017983284264750585
+"master builder vishvakarman,",master,0.017983284264750585
+wild flight,wild flight,0.017983284264750585
+magic,magic,0.017983284264750585
+place. on,place. on,0.017983284264750585
+fight,fight,0.017983284264750585
+aid,indra,0.04546458990069126
+"moment. thus,",moment.,0.017983284264750585
+vast army,vast,0.017983284264750585
+divine master builder,divine master,0.017983284264750585
+council,lanka,0.04761942145442287
+weapon,weapon created,0.017983284264750585
+fire,"fire god,",0.017983284264750585
+lanka. now,lanka. now ravanas,0.017983284264750585
+bitter complaint,bitter complaint,0.017983284264750585
+thereupon rama,thereupon rama,0.017983284264750585
+agni,agni,0.017983284264750585
+bharata,ayodhya,0.08078593320710675
+builder,"builder vishvakarman,",0.017983284264750585
+sea,sea,0.017983284264750585
+"builder vishvakarman,",builder,0.017983284264750585
+duel.,duel. furious,0.017983284264750585
+proclaim,news,0.09863494210935908
+brahma,brahma,0.017983284264750585
+man,man,0.017983284264750585
+lanka. now ravanas,lanka.,0.017983284264750585
+thereupon,innocence,0.13094991612790594
+ramas,"ramas command,",0.017983284264750585
+master builder,"master builder vishvakarman,",0.017983284264750585
+fragrance,whole,1.0
+place.,sita,0.2592679073618569
+master,master builder,0.017983284264750585

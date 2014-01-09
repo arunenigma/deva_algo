@@ -1,5 +1,230 @@
 Feature Word,Priority Index Old,Proximity Score,Neighbour
-tency,1.0,1.0,tency
-appear,0.809424160852,1.0,appear
-birth,0.333333333333,1.0,birth
-Nature,0.702631510272,1.0,Nature
+success,0.577207865503,1.0,success
+Sugriva,0.376505801614,1.0,Sugriva
+citadel,0.577207865503,1.0,citadel
+fortification,0.577207865503,1.0,fortification
+description,0.577207865503,1.0,description
+Hanuman,1.0,1.0,Hanuman
+Ravanas,0.697139463634,1.0,Ravanas
+Ravanas,0.697139463634,1.0,Ravanas citadel
+Ravanas citadel,1.0,1.0,Ravanas
+Ravanas citadel,1.0,1.0,Ravanas citadel
+vast,0.577207865503,3.6093055747121947,Lanka
+coast.,0.577207865503,2.647982468239281,Lanka
+council,0.577207865503,2.647982468239281,Lanka
+march,0.577207865503,4.1586330641252882,Lanka
+Lanka,0.524078301094,4.845292425891655,shall
+shall,0.577207865503,4.845292425891655,Lanka
+vast army,1.0,1.0,vast
+vast army,1.0,1.0,vast army
+coast. When,1.0,1.0,coast.
+coast. When,1.0,1.0,coast. When
+return,0.577207865503,1.0,return
+fight,0.577207865503,1.0,fight
+"Ravanas brother,",1.0,1.0,"Ravanas brother,"
+envy,0.577207865503,1.0220059003106476,Ravana
+worst,0.577207865503,1.0418112105902304,Ravana
+hero,0.577207865503,1.0550147507766188,Ravana
+Ravana,0.676702442505,1.0550147507766188,hero
+ill-will,0.577207865503,1.0264070803727769,Ravana
+worst enemies,1.0,1.0,worst
+worst enemies,1.0,1.0,worst enemies
+Vibhishana,0.851239669421,1.0,Vibhishana
+Rakshasas,0.745242988431,1.0,Rakshasas
+sea,0.577207865503,1.0,sea
+builder,0.577207865503,1.0,builder
+builder,0.577207865503,1.0,"builder Vishvakarman,"
+divine,0.577207865503,1.0,divine
+divine,0.577207865503,1.0,divine master
+divine,0.577207865503,1.0,divine master builder
+monkey,0.745242988431,1.4469896728987595,latter
+master,0.577207865503,1.0,master
+master,0.577207865503,1.0,master builder
+master,0.577207865503,1.0,"master builder Vishvakarman,"
+Nala,0.577207865503,1.0,Nala
+latter,0.684319782337,1.4469896728987595,monkey
+Vishvakarman,0.577207865503,1.0,Vishvakarman
+divine master,1.0,1.0,divine
+divine master,1.0,1.0,divine master
+divine master,1.0,1.0,divine master builder
+"monkey Nala,",1.0,1.0,monkey
+"monkey Nala,",1.0,1.0,"monkey Nala,"
+"builder Vishvakarman,",1.0,1.0,builder
+"builder Vishvakarman,",1.0,1.0,"builder Vishvakarman,"
+master builder,1.0,1.0,master
+master builder,1.0,1.0,master builder
+master builder,1.0,1.0,"master builder Vishvakarman,"
+divine master builder,1.0,1.0,divine
+divine master builder,1.0,1.0,divine master
+divine master builder,1.0,1.0,divine master builder
+"master builder Vishvakarman,",1.0,1.0,master
+"master builder Vishvakarman,",1.0,1.0,master builder
+"master builder Vishvakarman,",1.0,1.0,"master builder Vishvakarman,"
+Ramas,0.524078301094,1.0,Ramas
+Ramas,0.524078301094,1.0,"Ramas command,"
+command,0.684319782337,1.0,command
+"Ramas command,",1.0,1.0,Ramas
+"Ramas command,",1.0,1.0,"Ramas command,"
+bridge,0.745242988431,1.0,bridge
+Lanka.,0.577207865503,1.0,Lanka.
+Lanka.,0.577207865503,1.0,Lanka. Now
+Lanka.,0.577207865503,1.0,Lanka. Now Ravanas
+town,0.577207865503,1.0,town
+Lanka. Now,1.0,1.0,Lanka.
+Lanka. Now,1.0,1.0,Lanka. Now
+Lanka. Now,1.0,1.0,Lanka. Now Ravanas
+Ravanas town,1.0,1.0,Ravanas town
+Lanka. Now Ravanas,1.0,1.0,Lanka.
+Lanka. Now Ravanas,1.0,1.0,Lanka. Now
+Lanka. Now Ravanas,1.0,1.0,Lanka. Now Ravanas
+sortie,0.577207865503,1.0,sortie
+place,0.577207865503,1.0,place
+chief,0.577207865503,1.0,chief
+prominent,0.577207865503,8.6872874209045143,son
+side,0.577207865503,2.5374574841809028,son
+fellow-,0.577207865503,7.9185586788140618,son
+son,0.609257068745,14.837117357628124,Angada
+Angada,0.577207865503,14.837117357628124,son
+"Ravanas side,",1.0,1.0,"Ravanas side,"
+fellow- combatants,1.0,1.0,fellow-
+fellow- combatants,1.0,1.0,fellow- combatants
+son Indrajit,1.0,1.0,son
+son Indrajit,1.0,1.0,son Indrajit
+prominent fellow-,1.0,1.0,prominent
+prominent fellow-,1.0,1.0,prominent fellow-
+moment.,0.577207865503,1.0,moment.
+moment.,0.577207865503,1.0,"moment. Thus,"
+magic,0.684319782337,1.0,magic
+magic,0.684319782337,1.0,magic arts
+magic arts,1.0,1.0,magic
+magic arts,1.0,1.0,magic arts
+"moment. Thus,",1.0,1.0,moment.
+"moment. Thus,",1.0,1.0,"moment. Thus,"
+Jambavan,0.684319782337,1.0,Jambavan
+Kailasa,0.577207865503,1.0,Kailasa
+Mount,0.577207865503,1.0,Mount
+Mount,0.577207865503,1.0,"Mount Kailasa,"
+fetch,0.577207865503,1.0,fetch
+advice,0.684319782337,1.0,advice
+order,0.45125933913,1.0,order
+"Mount Kailasa,",1.0,1.0,Mount
+"Mount Kailasa,",1.0,1.0,"Mount Kailasa,"
+whole,0.609257068745,55.60719528635385,fragrance
+fragrance,0.577207865503,55.60719528635385,whole
+image,0.577207865503,2.6688617407457156,city
+city,0.49643128602,13.720925882933466,Sita
+place.,0.577207865503,14.417161156155075,Sita
+mountain,0.577207865503,16.856645002728726,Sita
+Sita,0.523634831896,16.856645002728726,mountain
+occasion,0.684319782337,1.0,occasion
+"city carrying,",1.0,1.0,city
+"city carrying,",1.0,1.0,"city carrying,"
+place. On,1.0,1.0,place.
+place. On,1.0,1.0,place. On
+swoon,0.577207865503,1.0,swoon
+Horrified,0.577207865503,1.0,Horrified
+regard,0.577207865503,5.2712499885079405,speech
+virtue,0.577207865503,6.2204166526208162,speech
+delusion,0.577207865503,13.339166633467384,speech
+Fate,0.577207865503,3.3729166602821894,speech
+speech,0.508990360128,13.339166633467384,delusion
+bitter complaints,1.0,1.0,bitter complaints
+whole affair,1.0,1.0,whole affair
+Lakshmana,0.380027007066,3.3746303201698176,death
+violent,0.577207865503,1.0,violent
+battle,0.684319782337,1.0,battle
+death,0.302950439565,3.3746303201698176,Lakshmana
+duel.,0.577207865503,1.0,duel.
+duel.,0.577207865503,1.0,duel. Furious
+field,0.577207865503,1.0,field
+Indrajit,0.809064464463,1.0,Indrajit
+duel. Furious,1.0,1.0,duel.
+duel. Furious,1.0,1.0,duel. Furious
+day,0.577207865503,1.0,day
+night,0.684319782337,1.0,night
+duel,0.577207865503,1.0,duel
+chariot,0.302950439565,12.862186946355019,come
+come,0.255344848309,12.862186946355019,chariot
+Indra,0.577207865503,2.5281583292217298,aid
+aid,0.508990360128,2.5281583292217298,Indra
+"Ramas aid,",1.0,1.0,"Ramas aid,"
+head,0.577207865503,1.0,head
+time,0.302950439565,1.0,time
+"Ravanas heads,",1.0,1.0,"Ravanas heads,"
+god,0.684319782337,1.0,god
+Brahma,0.577207865503,1.0,Brahma
+heart,0.577207865503,1.0,heart
+weapon,0.577207865503,1.0,weapon
+weapon,0.577207865503,1.0,weapon created
+Ravanas heart,1.0,1.0,Ravanas heart
+weapon created,1.0,1.0,weapon
+weapon created,1.0,1.0,weapon created
+Rakshasas.,0.577207865503,1.0,Rakshasas.
+Rakshasas.,0.577207865503,1.0,Rakshasas. Ravana
+flight,0.577207865503,1.0,flight
+wild,0.577207865503,1.0,wild
+wild,0.577207865503,1.0,wild flight
+wild flight,1.0,1.0,wild
+wild flight,1.0,1.0,wild flight
+Rakshasas. Ravana,1.0,1.0,Rakshasas.
+Rakshasas. Ravana,1.0,1.0,Rakshasas. Ravana
+send,0.577207865503,9.0726624782800069,news
+proclaim,0.577207865503,5.4848124879333371,news
+victory,0.577207865503,3.6908874927600022,news
+news,0.508990360128,9.0726624782800069,send
+presence,0.577207865503,8.1756999806933415,news
+suffer,0.577207865503,1.0,suffer
+woman,0.45125933913,1.0,woman
+revenge,0.577207865503,1.0,revenge
+ignominy,0.577207865503,1.0,ignominy
+lap,0.577207865503,1.0,lap
+man,0.45125933913,1.0,man
+wife,0.227391307059,1.0,wife
+complaint,0.577207865503,1.6881458314818349,bitter
+erect,0.577207865503,7.8814583148183486,bitter
+bitter,0.508990360128,15.826711622928164,nothing
+nothing,0.45125933913,15.826711622928164,bitter
+pyre,0.745242988431,1.0,pyre
+bitter complaint,1.0,1.0,bitter
+bitter complaint,1.0,1.0,bitter complaint
+nothing remained,1.0,1.0,nothing
+nothing remained,1.0,1.0,nothing remained
+witness,0.577207865503,1.0,witness
+Agni,0.684319782337,1.0,Agni
+fire,0.684319782337,1.0,fire
+fire,0.684319782337,1.0,"fire god,"
+"fire god,",1.0,1.0,fire
+"fire god,",1.0,1.0,"fire god,"
+innocent,0.577207865503,1.0,innocent
+solemn,0.577207865503,1.0,solemn
+solemn,0.577207865503,1.0,"solemn speech,"
+Rakshasa,0.577207865503,1.0,Rakshasa
+palace,0.376505801614,1.0,palace
+pure,0.577207865503,1.0,pure
+"solemn speech,",1.0,1.0,solemn
+"solemn speech,",1.0,1.0,"solemn speech,"
+Bharata,0.302950439565,4.4922791642379236,Ayodhya
+Ayodhya,0.376505801614,4.4922791642379236,Bharata
+Thereupon,0.577207865503,7.281757558856123,innocence
+Shatrughna,0.577207865503,19.36206055665636,innocence
+innocence,0.508990360128,19.36206055665636,Shatrughna
+Sitas,0.577207865503,1.4832121199120094,innocence
+people.,0.577207865503,7.7649696787681322,innocence
+Thereupon Rama,1.0,1.0,Thereupon
+Thereupon Rama,1.0,1.0,Thereupon Rama
+people. Now,1.0,1.0,people.
+people. Now,1.0,1.0,people. Now
+people. Now,1.0,1.0,people. Now Rama
+"Sitas innocence,",1.0,1.0,Sitas
+"Sitas innocence,",1.0,1.0,"Sitas innocence,"
+people. Now Rama,1.0,1.0,people.
+people. Now Rama,1.0,1.0,people. Now
+people. Now Rama,1.0,1.0,people. Now Rama
+populace,0.577207865503,1.0,populace
+amidst,0.577207865503,1.0,amidst
+enter,0.684319782337,1.0,enter
+enter,0.684319782337,1.0,enter amidst
+enter amidst,1.0,1.0,enter
+enter amidst,1.0,1.0,enter amidst
+welfare,0.577207865503,1.0,welfare
+subjects.,0.577207865503,1.0,subjects.

@@ -14,6 +14,7 @@ class MasterUAG(object):
     def draw_master_uag(self, uag):
         print 'Drawing graph ...'
         for row in self.ps:
+            print row
             if len(row) == 3:  # invisible nodes DEFECT ?
                 if row[0] != row[1]:
                     if self.remove_n_gram_cliche(row[0], row[1]) == 0:
@@ -31,7 +32,7 @@ class MasterUAG(object):
         uag.write('uag.dot')
         u = pgv.AGraph(file='uag.dot')
         u.layout(prog='dot')
-        u.draw('concepts.pdf')
+        u.draw('uag.pdf')
 
         edges = u.edges()
         g1 = nx.Graph(edges)

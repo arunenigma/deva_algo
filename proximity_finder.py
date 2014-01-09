@@ -7,7 +7,7 @@ class ProximityFinder(object):
     def __init__(self, f1, f2):
         """
         @param f1: PI sheet
-        @param f2: Modified PI Sheet
+        @param f2: Modified PI Sheet with PS
         """
         self.f1 = f1
         self.f2 = f2
@@ -17,14 +17,20 @@ class ProximityFinder(object):
         self.heads = []
         self.head_clusters = {}
 
+        # unstructured text
+        self.tails = []
+        self.tail_clusters = {}
+
     def read_pi_sheet(self):
         self.f1.next()
         for row in self.f1:
+            print 'ROW-> ', row
             # unigrams
             if len(row[0].split(' ')) == 1 and not '|' in row[3]:
                 start_head = str(sum([int(i) for i in row[3].split(' ')[:-2]])) + ' | ' + str(
                     len([int(i) for i in row[3].split(' ')[:-2]]))
                 start_tail = [int(i) for i in row[3].split(' ')[-2:]]
+                print row[0], row[1], start_head, start_tail
                 self.section_n_grams.append([row[0], row[1], start_head, start_tail])
 
             if len(row[0].split(' ')) == 2 and row[3].count('|') == 1:
@@ -63,6 +69,8 @@ class ProximityFinder(object):
                 self.section_n_grams.append(
                     [row[0], row[1], start_head, start_tail, end_head, end_tail])
 
+    """
+    structured text
     def subsection_clustering(self):
         for ngram in self.section_n_grams:
             self.heads.append(ngram[2])
@@ -74,10 +82,27 @@ class ProximityFinder(object):
                 if head == ngram[2]:
                     head_cluster.append(ngram)
             self.head_clusters[head] = head_cluster
+    """
+
+    def subsection_clustering(self):
+        """
+        clustering of unstructured text
+        clustering is done based on statement number
+        """
+        for ngram in self.section_n_grams:
+            self.tails.append(ngram[3][0])
+        self.tails = list(set(self.tails))
+
+        for tail in self.tails:
+            tail_cluster = []
+            for ngram in self.section_n_grams:
+                if tail == ngram[3][0]:
+                    tail_cluster.append(ngram)
+            self.tail_clusters[tail] = tail_cluster
 
     def build_distance_matrix(self):
         print 'Building Distance Matrices ...'
-        for head, ngrams in self.head_clusters.iteritems():
+        for tail, ngrams in self.tail_clusters.iteritems():
             word_indices = []
             stmt_indices = []
             priority_indices = []

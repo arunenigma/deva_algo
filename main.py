@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
+import os
+import fnmatch
 from master_dag import MasterDAG
 from master_uag import MasterUAG
 
@@ -9,7 +11,7 @@ __license__ = "GPL"
 __version__ = "1.0.1"
 __email__ = "axs918@case.edu"
 
-from tweet_analyzer import LocationVector, WordTagger
+from doc_analyzer import LocationVector, WordTagger
 from range_estimator import RangeCalculator
 #from fuzzy_plot import FuzzyPlotFilterI
 #from scatter_plot import ScatterPlot
@@ -18,126 +20,125 @@ from proximity_finder import ProximityFinder
 from neuro_fuzzy import NeuroFuzzySystem
 from fuzzy_concepts import FuzzyConcept
 from dom import DegreeOfMembership
-from read import ReadTweets
 from corpus import Corpus
 import pygraphviz as pgv
 import csv
 
 if __name__ == '__main__':
-    tweet_count = 0
-    tweet_word_count_list, corpus_words = [], []
-    tweet_bi_gram_count_list, corpus_bi_grams = [], []
-    tweet_tri_gram_count_list, corpus_tri_grams = [], []
-    tweet_four_gram_count_list, corpus_four_grams = [], []
-    tweet_five_gram_count_list, corpus_five_grams = [], []
+    doc_count = 0
+    doc_word_count_list, corpus_words = [], []
+    doc_bi_gram_count_list, corpus_bi_grams = [], []
+    doc_tri_gram_count_list, corpus_tri_grams = [], []
+    doc_four_gram_count_list, corpus_four_grams = [], []
+    doc_five_gram_count_list, corpus_five_grams = [], []
 
-    fr = open('epics/yajurveda.txt', 'rb')
-    fw = open('tweets.txt', 'wb')
-    read = ReadTweets(fw)
-    read.read_file(fr)
-    fr.close()
-    fw.close()
-    #sys.exit(1)
+    def recurse_dir(path, file_type):
+        for root, dirs, docs in os.walk(path):
+            for document in fnmatch.filter(docs, file_type):
+                yield os.path.join(root, document)
 
-    # building corpus of tweets
-    fr = open('tweets_all.txt', 'rb')
-    for tweet in fr.readlines():
-        print tweet
-        tweet_words = []
+    # building corpus of docs
+    corpus = []
+    corpus_bigrams = []
+    corpus_trigrams = []
+    corpus_fourgrams = []
+    corpus_fivegrams = []
+    for doc in recurse_dir(r'./epics', '*.txt'):
+        doc_file = open(doc, 'rb')
+        doc = doc_file.read()
+        doc_words = []
         bi_grams = []
         tri_grams = []
         four_grams = []
         five_grams = []
 
-        cor = Corpus(tweet, tweet_words, bi_grams, tri_grams, four_grams, five_grams)
+        cor = Corpus(doc, doc_words, bi_grams, tri_grams, four_grams, five_grams)
         cor.generate_location_vector(cor.parse_xml(), [0])
-        tweet_count += 1
+        doc_count += 1
 
-        tweet_word_count = len(tweet_words)
-        tweet_word_count_list.append(tweet_word_count)
-        corpus_words.append(tweet_words)
+        doc_word_count = len(doc_words)
+        doc_word_count_list.append(doc_word_count)
+        corpus_words.append(doc_words)
 
-        tweet_bi_gram_count = len(bi_grams)
-        tweet_bi_gram_count_list.append(tweet_bi_gram_count)
+        doc_bi_gram_count = len(bi_grams)
+        doc_bi_gram_count_list.append(doc_bi_gram_count)
         corpus_bi_grams.append(bi_grams)
 
-        tweet_tri_gram_count = len(tri_grams)
-        tweet_tri_gram_count_list.append(tweet_tri_gram_count)
+        doc_tri_gram_count = len(tri_grams)
+        doc_tri_gram_count_list.append(doc_tri_gram_count)
         corpus_tri_grams.append(tri_grams)
 
-        tweet_four_gram_count = len(four_grams)
-        tweet_four_gram_count_list.append(tweet_four_gram_count)
+        doc_four_gram_count = len(four_grams)
+        doc_four_gram_count_list.append(doc_four_gram_count)
         corpus_four_grams.append(four_grams)
 
-        tweet_five_gram_count = len(five_grams)
-        tweet_five_gram_count_list.append(tweet_five_gram_count)
+        doc_five_gram_count = len(five_grams)
+        doc_five_gram_count_list.append(doc_five_gram_count)
         corpus_five_grams.append(five_grams)
 
-    corpus = []
-    for tweet in corpus_words:
-        for word in tweet:
-            corpus.append(word)
+        for doc_words in corpus_words:
+            for word in doc_words:
+                corpus.append(word)
 
-    corpus_bigrams = []
-    for tweet in corpus_bi_grams:
-        for word in tweet:
-            corpus_bigrams.append(word)
+        for doc_bi_grams in corpus_bi_grams:
+            for bigram in doc_bi_grams:
+                corpus_bigrams.append(bigram)
 
-    corpus_trigrams = []
-    for tweet in corpus_tri_grams:
-        for word in tweet:
-            corpus_trigrams.append(word)
+        for doc_tri_grams in corpus_tri_grams:
+            for trigram in doc_tri_grams:
+                corpus_trigrams.append(trigram)
 
-    corpus_fourgrams = []
-    for tweet in corpus_four_grams:
-        for word in tweet:
-            corpus_fourgrams.append(word)
+        for doc_four_grams in corpus_four_grams:
+            for fourgram in doc_four_grams:
+                corpus_fourgrams.append(fourgram)
 
-    corpus_fivegrams = []
-    for tweet in corpus_five_grams:
-        for word in tweet:
-            corpus_fivegrams.append(word)
+        for doc_five_grams in corpus_five_grams:
+            for fivegram in doc_five_grams:
+                corpus_fivegrams.append(fivegram)
 
-    fr.close()
+        doc_file.close()
 
-    # tweet analysing and creating word bags
-    fr = open('tweets.txt', 'rb')
-    tweet_ID = 0
+    # ********************************************************************************************************
 
+    # document analysing and creating word bags
+    print 'document analysing and creating word bags ...'
+    doc_ID = 0
     out_1 = open('PI.csv', 'wb')
     csv_out_1 = csv.writer(out_1)
     out_2 = open('PS.csv', 'wb')
     csv_out_2 = csv.writer(out_2)
+    for i, doc in enumerate(recurse_dir(r'./epics', '*.txt')):
 
-    for i, tweet in enumerate(fr.readlines()):
-        print '*******************************************************************'
-        print i, tweet
-        tweet_words = []
+        print i, doc
+        doc_file = open(doc, 'rb')
+        doc = doc_file.read()
+        doc_words = []
         bi_grams = []
         tri_grams = []
         four_grams = []
         five_grams = []
 
-        loc_vec = LocationVector(tweet, tweet_words, bi_grams, tri_grams, four_grams, five_grams)
+        loc_vec = LocationVector(doc, doc_words, bi_grams, tri_grams, four_grams, five_grams)
         loc_vec.generate_location_vector(loc_vec.parse_xml(), [0])
 
-        tweet_words = loc_vec.tweet_words
+        doc_words = loc_vec.doc_words
         bi_grams = loc_vec.bi_grams
         tri_grams = loc_vec.tri_grams
         four_grams = loc_vec.four_grams
         five_grams = loc_vec.five_grams
+        print 'start word tagging ...'
 
-        tweet_ID += 1
-        tagger = WordTagger(tweet_ID, tweet, tweet_words, bi_grams,
+        doc_ID += 1
+        tagger = WordTagger(doc_ID, doc, doc_words, bi_grams,
                             tri_grams, four_grams, five_grams, corpus, corpus_bigrams,
-                            corpus_trigrams, corpus_fourgrams, corpus_fivegrams, tweet_count, tweet_word_count_list,
-                            tweet_bi_gram_count_list, tweet_tri_gram_count_list, tweet_four_gram_count_list,
-                            tweet_five_gram_count_list)
+                            corpus_trigrams, corpus_fourgrams, corpus_fivegrams, doc_count, doc_word_count_list,
+                            doc_bi_gram_count_list, doc_tri_gram_count_list, doc_four_gram_count_list,
+                            doc_five_gram_count_list)
         tagger.generate_location_vector(tagger.parse_xml(), [0])
 
         # ------------- Word Bags ------------
         # tfidf info list of N-grams
-        tf_idf_list = tagger.tf_idf_list  # all tweet words (unique)
+        tf_idf_list = tagger.tf_idf_list  # all doc words (unique)
         tf_idf_bigram_list = tagger.tf_idf_bigram_list
         tf_idf_trigram_list = tagger.tf_idf_trigram_list
         tf_idf_fourgram_list = tagger.tf_idf_fourgram_list
@@ -198,7 +199,7 @@ if __name__ == '__main__':
             return y
 
             # ----------------------------------------------------------
-
+        print 'Neuro-fuzzy ...'
         u1 = neuro_fuzzy(tf_idf_common_eng_words)
         u2 = neuro_fuzzy(tf_idf_nouns_unigrams)
         u3 = neuro_fuzzy(tf_idf_all_cap_unigrams)
@@ -242,6 +243,8 @@ if __name__ == '__main__':
         PI_bundle_trigrams = nf.pi_bundle_trigrams
         PI_bundle_fourgrams = nf.pi_bundle_fourgrams
         PI_bundle_fivegrams = nf.pi_bundle_fivegrams
+
+        # Exception try using assert
         if len(PI_bundle_unigrams) == 0 and len(PI_bundle_bigrams) == 0 and len(
                 PI_bundle_trigrams) == 0 and len(
                 PI_bundle_fourgrams) == 0 and len(PI_bundle_fivegrams) == 0:
@@ -306,6 +309,7 @@ if __name__ == '__main__':
             # writing master PI and PS sheets
             ske = ConceptSkeleton(pi_dict, ps_dict, csv_out_1, csv_out_2)
             ske.write_output_to_csv()
+            doc_file.close()
 
     out_1.close()
     out_2.close()

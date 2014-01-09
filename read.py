@@ -1,18 +1,15 @@
-class ReadTweets(object):
-    def __init__(self, tweets):
-        self.tweets = tweets
+class ReadDocs(object):
+    def __init__(self, docs):
+        self.docs = docs
 
-    def read_file(self, tweets_file):
-        """
-            reading tweets and writing 1000 tweets into a new file for prototyping
-        """
+    def read_file(self, docs_file):
         i = 0
-        tweets = tweets_file.readlines()
-        for tweet in tweets:
-            if len(tweet.strip()) > 0 and len(tweet.split(' ')) > 2:
-                if i < 100:
-                    self.tweets.write('<xml>' + tweet.strip() + '</xml>\n')
-                    i += 1
-                else:
-                    #print 'TWEET ->', tweet # tweet entries that have missing fields
-                    pass
+        docs = docs_file.read()
+
+        if len(docs.strip()) > 0 and len(docs.split(' ')) > 2:
+            if i < 100:
+                self.docs.write('<xml>' + docs.strip() + '</xml>\n')
+                i += 1
+            else:
+                #print 'TWEET ->', doc # doc entries that have missing fields
+                pass

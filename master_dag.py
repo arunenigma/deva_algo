@@ -14,7 +14,7 @@ class MasterDAG(object):
 
         self.nodes = []
         self.edges = []
-        self.th = 0.5
+        self.th = 0.0
         self.rdf_triples = []
         self.root_node = ''
         self.dag_nodes = []
@@ -46,7 +46,7 @@ class MasterDAG(object):
             self.uag_to_dag_algorithm(self.root_node)
 
     def uag_to_dag_algorithm(self, root):
-        print 'DAG conv'
+        print 'UAG to DAG conversion'
         self.dag_nodes = list(self.dag_nodes)
         candidates = []
         validated_candidates = []
@@ -138,18 +138,17 @@ class MasterDAG(object):
             for triple in triples:
                 if triple:
                     edges.append(triple[0])
-                    cleaned_rdf_triples.append([triple[0][0], triple[0][1]])
+                    cleaned_rdf_triples.append([triple[0][0], triple[0][1], triple[1]])
 
         for rdf_triple in cleaned_rdf_triples:
             print 'Triple', rdf_triple
 
         for edge in edges:
-            print 'drawing DAG'
-            dag.add_node(edge[0], color='', style='filled', shape='box',
-                         font='courier')
-            dag.add_node(edge[1], color='', style='filled', shape='box',
-                         font='courier')
-            dag.add_edge(edge[0], edge[1], color='', style='', fontname='')
+            dag.add_node(edge[0], color='red', style='', shape='box',
+                         fontname='courier')
+            dag.add_node(edge[1], color='red', style='', shape='box',
+                         fontname='courier')
+            dag.add_edge(edge[0], edge[1], color='blue', style='', fontname='')
         dag.write('dag.dot')
         img = pgv.AGraph(file='dag.dot')  # img = pgv.AGraph('graph.dot') doesn't work | bug in Pygraphviz
         img.layout(prog='dot')

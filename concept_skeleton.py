@@ -9,5 +9,4 @@ class ConceptSkeleton(object):
         for node, pi in self.pi_dict.iteritems():
             self.f1.writerow([node, pi])
         for pair, ps_sect in self.ps_dict.iteritems():
-            print 'PS +>', pair, ps_sect
             self.f2.writerow([pair[0], pair[1], ps_sect])
