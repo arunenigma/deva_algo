@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4bc70e8-30b0-4e37-becf-9fae94d4d908" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bottle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/concepts.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/concepts.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/epics/yajurveda.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/graph.dot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/performance.profile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tweets.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tweets_all.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tweets_all.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tweet_analyzer.py" afterPath="$PROJECT_DIR$/doc_analyzer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dag.pdf" afterPath="$PROJECT_DIR$/dag.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PI.csv" afterPath="$PROJECT_DIR$/PI.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PS.csv" afterPath="$PROJECT_DIR$/PS.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concept_skeleton.py" afterPath="$PROJECT_DIR$/concept_skeleton.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corpus.py" afterPath="$PROJECT_DIR$/corpus.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dag.dot" afterPath="$PROJECT_DIR$/dag.dot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_pi_sheet.csv" afterPath="$PROJECT_DIR$/final_pi_sheet.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fuzzy_concepts.py" afterPath="$PROJECT_DIR$/fuzzy_concepts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master_dag.py" afterPath="$PROJECT_DIR$/master_dag.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master_uag.py" afterPath="$PROJECT_DIR$/master_uag.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modified_pi_sheet.csv" afterPath="$PROJECT_DIR$/modified_pi_sheet.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neuro_fuzzy.py" afterPath="$PROJECT_DIR$/neuro_fuzzy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi_sheet.csv" afterPath="$PROJECT_DIR$/pi_sheet.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proximity_finder.py" afterPath="$PROJECT_DIR$/proximity_finder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/read.py" afterPath="$PROJECT_DIR$/read.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uag.dot" afterPath="$PROJECT_DIR$/uag.dot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="d4bc70e8-30b0-4e37-becf-9fae94d4d908" name="Default" comment="added doc | model working primitively">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="decipher.iws" />
@@ -64,7 +34,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="34" selection-start="3695" selection-end="3695" vertical-scroll-proportion="-3.8659794" vertical-offset="4792" max-vertical-offset="5568">
+            <state line="336" column="29" selection-start="13244" selection-end="13244" vertical-scroll-proportion="10.541177" vertical-offset="0" max-vertical-offset="5568">
               <folding>
                 <element signature="e#24#34#0" expanded="true" />
               </folding>
@@ -503,13 +473,19 @@
       <created>1386308169797</created>
       <updated>1386308169797</updated>
     </task>
+    <task id="LOCAL-00001" summary="added doc | model working primitively">
+      <created>1389309444070</created>
+      <updated>1389309444070</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.8644189" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -519,7 +495,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.82137734" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24425635" sideWeight="0.8472222" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32917705" sideWeight="0.8644189" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -556,6 +532,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="added doc | model working primitively" />
+    <option name="LAST_COMMIT_MESSAGE" value="added doc | model working primitively" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -676,7 +654,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="34" selection-start="3695" selection-end="3695" vertical-scroll-proportion="-3.8659794" vertical-offset="4792" max-vertical-offset="5568">
+        <state line="336" column="29" selection-start="13244" selection-end="13244" vertical-scroll-proportion="10.541177" vertical-offset="0" max-vertical-offset="5568">
           <folding>
             <element signature="e#24#34#0" expanded="true" />
           </folding>
