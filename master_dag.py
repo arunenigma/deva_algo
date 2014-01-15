@@ -4,6 +4,20 @@ import pygraphviz as pgv
 import networkx as nx
 
 
+class Memoize(object):
+    # using class as a decorator
+    def __init__(self, func):
+        self.func = func
+        self.cache = {}
+
+    def __call__(self, *args):
+        try:
+            return self.cache[args]
+        except KeyError:
+            self.cache[args] = self.func(*args)
+        return self.cache[args]
+
+
 class MasterDAG(object):
     def __init__(self, pi, ps, concepts):
         self.pi = pi
@@ -14,7 +28,7 @@ class MasterDAG(object):
 
         self.nodes = []
         self.edges = []
-        self.th = 0.0
+        self.th = 0
         self.rdf_triples = []
         self.root_node = ''
         self.dag_nodes = []
@@ -32,7 +46,6 @@ class MasterDAG(object):
             self.edges.append(edges)
 
     def draw_master_dag(self):
-
         for nodes, edges in zip(self.nodes, self.edges):
             candidates = []
             # assuming the root is the node with maximum PI
@@ -43,8 +56,9 @@ class MasterDAG(object):
             self.root_node = candidates[-1][0]
             self.dag_nodes = nodes
             self.dag_edges = edges
-            self.uag_to_dag_algorithm(self.root_node)
+            self.uag_to_dag_algorithm(self, self.root_node)
 
+    @Memoize
     def uag_to_dag_algorithm(self, root):
         print 'UAG to DAG conversion'
         self.dag_nodes = list(self.dag_nodes)
@@ -54,8 +68,8 @@ class MasterDAG(object):
         self.dag_nodes.remove(root)
         search_node_pairs = list(product([root], self.dag_nodes))
         for node_pair in search_node_pairs:
-            print 'CF 1'
             if node_pair in self.ps_dict.keys():
+                print 'CF 1'
                 cf = self.cf_case_1(node_pair)
                 candidates.append([node_pair, round(cf, 2)])
             else:
@@ -78,7 +92,7 @@ class MasterDAG(object):
             self.dag_nodes.remove(node)
         for child in children:
             self.dag_nodes.append(child)
-            self.uag_to_dag_algorithm(child)
+            self.uag_to_dag_algorithm(self, child)
 
     def find_all_paths(self, ref_node, inspect_node):
         """
@@ -137,18 +151,20 @@ class MasterDAG(object):
         for triples in self.rdf_triples:
             for triple in triples:
                 if triple:
-                    edges.append(triple[0])
+                    edges.append([triple[0], triple[1]])
                     cleaned_rdf_triples.append([triple[0][0], triple[0][1], triple[1]])
 
         for rdf_triple in cleaned_rdf_triples:
             print 'Triple', rdf_triple
 
         for edge in edges:
-            dag.add_node(edge[0], color='red', style='', shape='box',
+            print edge, '235236'
+            dag.add_node(edge[0][0], color='red', style='', shape='box',
                          fontname='courier')
-            dag.add_node(edge[1], color='red', style='', shape='box',
+            dag.add_node(edge[0][1], color='red', style='', shape='box',
                          fontname='courier')
-            dag.add_edge(edge[0], edge[1], color='blue', style='', fontname='')
+            dag.add_edge(edge[0][0], edge[0][1], color='blue', style='', fontname='',
+                         xlabel=edge[1])
         dag.write('dag.dot')
         img = pgv.AGraph(file='dag.dot')  # img = pgv.AGraph('graph.dot') doesn't work | bug in Pygraphviz
         img.layout(prog='dot')

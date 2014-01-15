@@ -299,8 +299,7 @@ if __name__ == '__main__':
             file_4.close()
             file_5 = open('final_pi_sheet.csv', 'rU')
             csv_file_5 = csv.reader(file_5)
-            g = pgv.AGraph(directed=False, strict=True)
-            fc.draw_concept_graphs(csv_file_5, g)
+            fc.draw_concept_graphs(csv_file_5)
             file_5.close()
 
             pi_dict = fc.pi_dict

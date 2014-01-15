@@ -10,20 +10,22 @@ class MasterUAG(object):
         self.inference_paths = []
         self.skeletons = []
         self.concepts = {}
+        self.pi_dict = {}
 
     def draw_master_uag(self, uag):
+        for row in self.pi:
+            self.pi_dict[row[0]] = row[1]
         print 'Drawing graph ...'
         for row in self.ps:
-            print row
             if len(row) == 3:  # invisible nodes DEFECT ?
                 if row[0] != row[1]:
                     if self.remove_n_gram_cliche(row[0], row[1]) == 0:
                         uag.add_node(row[0], color='red', style='', shape='box',
-                                     xlabel=round(float(0.0), 2),
+                                     xlabel=round(float(self.pi_dict.get(row[0])), 2),
                                      fontname='courier')
 
                         uag.add_node(row[1].lower(), color='red', style='', shape='box',
-                                     xlabel=round(float(0.0), 2),
+                                     xlabel=round(float(self.pi_dict.get(row[1])), 2),
                                      fontname='courier')
 
                         uag.add_edge(row[0], row[1], color='blue', style='',

@@ -10,7 +10,9 @@ class FuzzyConcept(object):
         self.max_pi = 0.0
         self.min_pi = 0.0
         self.max_ps = 0.0
+        self.min_ps = 0.0
         self.denum = 0.0
+        self.denum_ps = 0.0
 
         self.skeletons = []
         self.inference_paths = []
@@ -21,12 +23,15 @@ class FuzzyConcept(object):
         self.header = self.f1.next()
 
         for row in self.f1:
+            print row
             pi.append(float(row[1]))
             ps.append(float(row[2]))
         self.max_ps = max(ps)
+        self.min_ps = min(ps)
         self.min_pi = min(pi)
         self.max_pi = max(pi)
         self.denum = self.max_pi - self.min_pi
+        self.denum_ps = self.max_ps - self.min_ps
 
     def write_final_pi_sheet(self, f2):
         self.pi_dict = {}
@@ -35,27 +40,15 @@ class FuzzyConcept(object):
         for row in self.f1_clone:
             if not self.max_pi == self.min_pi:
                 f2.writerow(
-                    [row[0], (float(row[1]) - self.min_pi) / self.denum, float(row[2]) / self.max_ps, row[3]])
+                    [row[0], (float(row[1]) - self.min_pi) / self.denum, (float(row[2]) - self.min_ps) / self.denum_ps, row[3]])
                 self.pi_dict[row[0]] = (float(row[1]) - self.min_pi) / self.denum
             else:
                 f2.writerow([row[0], (float(row[1])), float(row[2]), row[3]])
                 self.pi_dict[row[0]] = (float(row[1]))
 
-    def draw_concept_graphs(self, f3, graph):
+    def draw_concept_graphs(self, f3):
         f3.next()
         for row in f3:
             # converting all strings to lower case
             self.pi_dict[row[0].lower()] = row[1].lower()
             self.ps_dict[tuple([row[0].lower(), row[3].lower()])] = row[2]
-
-            graph.add_node(row[0].lower(), color='', style='', shape='box',
-                           xlabel=round(float(row[1]), 2),
-                           fontname='')
-            graph.add_node(row[3].lower(), color='', style='', shape='box',
-                           xlabel=round(float(row[1]), 2),
-                           fontname='')
-
-            if not row[0].lower() is row[3].lower():
-                graph.add_edge(row[0].lower(), row[3].lower(), color='', style='',
-                               label=round(float(row[2]), 2),
-                               fontname='')

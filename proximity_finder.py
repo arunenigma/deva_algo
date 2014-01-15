@@ -88,6 +88,7 @@ class ProximityFinder(object):
         """
         clustering of unstructured text
         clustering is done based on statement number
+        for structured text it is done based on section and subsections
         """
         for ngram in self.section_n_grams:
             self.tails.append(ngram[3][0])
@@ -102,6 +103,7 @@ class ProximityFinder(object):
 
     def build_distance_matrix(self):
         print 'Building Distance Matrices ...'
+        # for unstructured text, distance matrices are created for every single statement
         for tail, ngrams in self.tail_clusters.iteritems():
             word_indices = []
             stmt_indices = []
@@ -120,31 +122,31 @@ class ProximityFinder(object):
             word_indices_clone = word_indices
             stmt_indices_clone = stmt_indices
             priority_indices_clone = priority_indices
-
             for word_index, stmt_index, priority_index in zip(word_indices, stmt_indices, priority_indices):
                 dm_w_row = []
-                dm_s_row = []
+                #dm_s_row = [] # All statement info is commented out for unstructured text
                 dm_p_row = []
-
                 for word_index_clone, stmt_index_clone, priority_index_clone in zip(word_indices_clone,
                                                                                     stmt_indices_clone,
                                                                                     priority_indices_clone):
+                #if word_index != word_index_clone: will FAIL because diagonal as 0's are needed for np array
+                # TypeError: Iterator REFS_OK flag was not enabled will happen when trying to nditer below
+                # math computation refer ICTAI 2013 NEFCIS
                     dm_w_row.append(
-                        fabs(((1 + word_index) * (1 + stmt_index)) - ((1 + word_index_clone) * (1 + stmt_index_clone))))
-                    dm_s_row.append(fabs((1 + stmt_index) - (1 + stmt_index_clone)))
+                        fabs((1 + word_index) - (1 + word_index_clone)))
+                    #dm_s_row.append(fabs((1 + stmt_index) - (1 + stmt_index_clone)))
                     dm_p_row.append(fabs(float(priority_index) - float(priority_index_clone)))
-
                 dm_w_rows.append(dm_w_row)
-                dm_s_rows.append(dm_s_row)
+                #dm_s_rows.append(dm_s_row)
                 dm_p_rows.append(dm_p_row)
-
             dm_w = np.array(dm_w_rows)
-            dm_s = np.array(dm_s_rows)
+            #dm_s = np.array(dm_s_rows)
             dm_p = np.array(dm_p_rows)
             prox_mat = []
-            n_s = len(np.unique(dm_s))
+            #n_s = len(np.unique(dm_s))
             n_w = dm_w.shape[0]
 
+            """
             for w_dist, s_dist, PI in zip(np.nditer(dm_w), np.nditer(dm_s), np.nditer(dm_p)):
                 if PI == 0.0:
                     proximity_score = (w_dist + (n_s * s_dist)) / (n_w * n_s)
@@ -153,12 +155,26 @@ class ProximityFinder(object):
                     proximity_score = ((w_dist + (n_s * s_dist)) / (
                         n_w * n_s)) * log10(10 * PI)
                     prox_mat.append(proximity_score)
+            """
+            for w_dist, PI in zip(np.nditer(dm_w), np.nditer(dm_p)):
+                if PI == 0.0:
+                    proximity_score = w_dist / n_w
+                    prox_mat.append(proximity_score)
+                else:
+                    proximity_score = (w_dist / n_w) * log10(10 * PI)
+                    prox_mat.append(proximity_score)
 
             ps = np.array(prox_mat)
             ps = np.reshape(ps, dm_w.shape)
             for r, row in enumerate(ps):
-                for i, ele in enumerate(row):
-                    if ele == min(row):
-                        print feature_words[r], priority_indices[r], 1 - np.min(row), feature_words[i]
-                        self.f2.writerow(
-                            [feature_words[r], priority_indices[r], 1 - np.min(row), feature_words[i]])
+                if len(row) > 1:
+                    row_clone = row
+                    np.ndarray.sort(row)  # sort to catch the minimum other than 0
+                    print 'arun', row
+                    m = row[1]
+                    for i, ele in enumerate(row_clone):
+                        if ele == m:
+
+                            print feature_words[r], priority_indices[r], 1 - m, feature_words[i]
+                            self.f2.writerow(
+                                [feature_words[r], priority_indices[r], 1 - m, feature_words[i]])
