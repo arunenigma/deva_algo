@@ -24,13 +24,11 @@ class ProximityFinder(object):
     def read_pi_sheet(self):
         self.f1.next()
         for row in self.f1:
-            print 'ROW-> ', row
             # unigrams
             if len(row[0].split(' ')) == 1 and not '|' in row[3]:
                 start_head = str(sum([int(i) for i in row[3].split(' ')[:-2]])) + ' | ' + str(
                     len([int(i) for i in row[3].split(' ')[:-2]]))
                 start_tail = [int(i) for i in row[3].split(' ')[-2:]]
-                print row[0], row[1], start_head, start_tail
                 self.section_n_grams.append([row[0], row[1], start_head, start_tail])
 
             if len(row[0].split(' ')) == 2 and row[3].count('|') == 1:
@@ -170,11 +168,8 @@ class ProximityFinder(object):
                 if len(row) > 1:
                     row_clone = row
                     np.ndarray.sort(row)  # sort to catch the minimum other than 0
-                    print 'arun', row
                     m = row[1]
                     for i, ele in enumerate(row_clone):
                         if ele == m:
-
-                            print feature_words[r], priority_indices[r], 1 - m, feature_words[i]
                             self.f2.writerow(
                                 [feature_words[r], priority_indices[r], 1 - m, feature_words[i]])

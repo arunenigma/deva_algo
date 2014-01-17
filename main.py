@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
 import os
 import fnmatch
 from master_dag import MasterDAG
@@ -147,6 +146,7 @@ if __name__ == '__main__':
         # word bags Unigrams
         tf_idf_common_eng_words = tagger.common_eng_words  # common english excluding stopwords
         tf_idf_nouns_unigrams = tagger.nouns_unigrams  # uni-gram nouns excluding stopwords
+        tf_idf_verbs_unigrams = tagger.verbs_unigrams  # uni-gram verbs
         tf_idf_all_cap_unigrams = tagger.all_caps_unigrams
         tf_idf_numbers_unigrams = tagger.numbers_unigrams
 
@@ -156,7 +156,6 @@ if __name__ == '__main__':
         tf_idf_bigram_NNP_NN = tagger.bigram_nnp_nn  # bi-grams with NNP + NN POS
         tf_idf_bigram_NN_NN = tagger.bigram_nn_nn  # bi-grams with NN + NN POS
         tf_idf_bigram_NN_NNS = tagger.bigram_nn_nns  # bi-grams with NN + NNS POS eg. clock cycles
-        tf_idf_bigram_NN_VBD = tagger.bigram_nn_vbd  # bi-grams with NN + VBD POS eg. wishbone interconnect
 
         # ------------ word bags Trigrams -----------
 
@@ -204,13 +203,13 @@ if __name__ == '__main__':
         u2 = neuro_fuzzy(tf_idf_nouns_unigrams)
         u3 = neuro_fuzzy(tf_idf_all_cap_unigrams)
         u4 = neuro_fuzzy(tf_idf_numbers_unigrams)
+        u5 = neuro_fuzzy(tf_idf_verbs_unigrams)
 
         # fuzzy sets for bigrams
         b1 = neuro_fuzzy(tf_idf_bigram_NNP_NNP)
         b2 = neuro_fuzzy(tf_idf_bigram_NNP_NN)
         b3 = neuro_fuzzy(tf_idf_bigram_NN_NN)
         b4 = neuro_fuzzy(tf_idf_bigram_NN_NNS)
-        b5 = neuro_fuzzy(tf_idf_bigram_NN_VBD)
 
         # fuzzy sets for trigrams
         t1 = neuro_fuzzy(tf_idf_trigram_NNP_NNP_NNP)
@@ -227,9 +226,9 @@ if __name__ == '__main__':
         p1 = neuro_fuzzy(tf_idf_fivegram_NNP_NNP_NNP_NNP_NNP)  # p --> penta = five
 
         nf = NeuroFuzzySystem()
-        nf.neuro_fuzzy_modelling(tf_idf_list, u1, u2, u3, u4,
+        nf.neuro_fuzzy_modelling(tf_idf_list, u1, u2, u3, u4, u5,
                                  tf_idf_bigram_list,
-                                 b1, b2, b3, b4, b5, tf_idf_trigram_list, t1, t2, t3, t4, t5, t6, tf_idf_fourgram_list,
+                                 b1, b2, b3, b4, tf_idf_trigram_list, t1, t2, t3, t4, t5, t6, tf_idf_fourgram_list,
                                  f1, tf_idf_fivegram_list, p1)
 
         nf.norm_cog_unigrams()
@@ -313,16 +312,16 @@ if __name__ == '__main__':
     out_1.close()
     out_2.close()
 
-    # drawing master UAG
-    master_uag = pgv.AGraph(directed=False, strict=True)
+    # drawing master UAG from UCG
+    master_ucg = pgv.AGraph(directed=False, strict=True)
     f1 = open('PI.csv', 'rb')
     csv_f1 = csv.reader(f1)
     f2 = open('PS.csv', 'rb')
     csv_f2 = csv.reader(f2)
-    uag = MasterUAG(csv_f1, csv_f2)
-    uag.draw_master_uag(master_uag)
-    uag.extract_concepts()
-    concepts = uag.concepts
+    ucg = MasterUAG(csv_f1, csv_f2)
+    ucg.draw_master_uag(master_ucg)
+    ucg.extract_concepts()
+    concepts = ucg.concepts
 
     f1.close()
     f2.close()

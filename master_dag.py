@@ -38,7 +38,8 @@ class MasterDAG(object):
 
     def create_dict(self):
         for row in self.pi:
-            self.pi_dict[row[0]] = row[1]
+            if float(row[1]) > self.th:
+                self.pi_dict[row[0]] = row[1]
         for row in self.ps:
             self.ps_dict[tuple([row[0], row[1]])] = row[2]
         for nodes, edges in self.concepts.iteritems():
@@ -154,19 +155,28 @@ class MasterDAG(object):
                     edges.append([triple[0], triple[1]])
                     cleaned_rdf_triples.append([triple[0][0], triple[0][1], triple[1]])
 
-        for rdf_triple in cleaned_rdf_triples:
-            print 'Triple', rdf_triple
-
         for edge in edges:
-            print edge, '235236'
-            dag.add_node(edge[0][0], color='red', style='', shape='box',
-                         fontname='courier')
-            dag.add_node(edge[0][1], color='red', style='', shape='box',
-                         fontname='courier')
-            dag.add_edge(edge[0][0], edge[0][1], color='blue', style='', fontname='',
-                         xlabel=edge[1])
+            if self.remove_n_gram_cliche(edge[0][0], edge[0][1]) == 0:
+                w1 = edge[0][0]
+                w2 = edge[0][1]
+                print 'N-triple ->', w1, 'is', w2
+                dag.add_node(w1, color='red', style='', shape='box',
+                             fontname='courier')
+                dag.add_node(w2, color='red', style='', shape='box',
+                             fontname='courier')
+                dag.add_edge(w1, w2, color='blue', style='', fontname='',
+                             xlabel=edge[1])
         dag.write('dag.dot')
         img = pgv.AGraph(file='dag.dot')  # img = pgv.AGraph('graph.dot') doesn't work | bug in Pygraphviz
         img.layout(prog='dot')
         img.draw('dag.pdf')
         img.close()
+
+    @staticmethod
+    def remove_n_gram_cliche(node_1, node_2):
+        if len(node_1.split(' ')) < len(node_2.split(' ')):
+            inter = dict.fromkeys([x for x in node_1.split(' ') if x in node_2.split(' ')])
+            return len(inter)
+        else:
+            inter = dict.fromkeys([x for x in node_2.split(' ') if x in node_1.split(' ')])
+            return len(inter)

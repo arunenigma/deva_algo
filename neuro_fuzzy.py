@@ -38,7 +38,7 @@ class NeuroFuzzySystem(object):
         self.pi_bundle_fivegrams = {}
         self.mfs = []
 
-    def neuro_fuzzy_modelling(self, tf_idf_list, u1, u2, u3, u4, tf_idf_bigram_list, b1, b2, b3, b4, b5,
+    def neuro_fuzzy_modelling(self, tf_idf_list, u1, u2, u3, u4, u5, tf_idf_bigram_list, b1, b2, b3, b4,
                               tf_idf_trigram_list, t1, t2, t3, t4, t5, t6, tf_idf_fourgram_list, f1,
                               tf_idf_fivegram_list, p1):
         """
@@ -56,11 +56,11 @@ class NeuroFuzzySystem(object):
         u2 = {item[0]: item[1:] for item in u2}
         u3 = {item[0]: item[1:] for item in u3}
         u4 = {item[0]: item[1:] for item in u4}
+        u5 = {item[0]: item[1:] for item in u5}
         b1 = {item[0]: item[1:] for item in b1}
         b2 = {item[0]: item[1:] for item in b2}
         b3 = {item[0]: item[1:] for item in b3}
         b4 = {item[0]: item[1:] for item in b4}
-        b5 = {item[0]: item[1:] for item in b5}
         t1 = {item[0]: item[1:] for item in t1}
         t2 = {item[0]: item[1:] for item in t2}
         t3 = {item[0]: item[1:] for item in t3}
@@ -86,20 +86,23 @@ class NeuroFuzzySystem(object):
                     u4_nrn_info = u4.get(word, None)
                     if u4_nrn_info is not None:
                         activated_fuzzy_sets.append(bag_names.get('u4'))
+                    u5_nrn_info = u5.get(word, None)
+                    if u5_nrn_info is not None:
+                        activated_fuzzy_sets.append(bag_names.get('u5'))
                 except KeyError:
                     continue
 
                 self.mfs = []
                 self.wts = []
                 if u1_nrn_info is not None:
-                    u1_mf1 = u1_nrn_info[1] * u1_nrn_info[2] - 1
-                    u1_mf2 = u1_nrn_info[3] * u1_nrn_info[4] - 1
+                    u1_mf1 = u1_nrn_info[1] * u1_nrn_info[2] - 2
+                    u1_mf2 = u1_nrn_info[3] * u1_nrn_info[4] - 2
                     self.mfs.append([u1_mf1, u1_mf2])
                     self.wts.append(u1_nrn_info[2])
                     self.wts.append(u1_nrn_info[4])
                 if u2_nrn_info is not None:
-                    u2_mf1 = u2_nrn_info[1] * u2_nrn_info[2] + 1
-                    u2_mf2 = u2_nrn_info[3] * u2_nrn_info[4] + 1
+                    u2_mf1 = u2_nrn_info[1] * u2_nrn_info[2] + 3
+                    u2_mf2 = u2_nrn_info[3] * u2_nrn_info[4] + 3
                     self.mfs.append([u2_mf1, u2_mf2])
                     self.wts.append(u2_nrn_info[2])
                     self.wts.append(u2_nrn_info[4])
@@ -115,6 +118,13 @@ class NeuroFuzzySystem(object):
                     self.mfs.append([u4_mf1, u4_mf2])
                     self.wts.append(u4_nrn_info[2])
                     self.wts.append(u4_nrn_info[4])
+                if u5_nrn_info is not None:
+                    u5_mf1 = u5_nrn_info[1] * u5_nrn_info[2]  # verbs are potential predicates
+                    u5_mf2 = u5_nrn_info[3] * u5_nrn_info[4]
+                    self.mfs.append([u5_mf1, u5_mf2])
+                    self.wts.append(u5_nrn_info[2])
+                    self.wts.append(u5_nrn_info[4])
+                    
                 if len(self.mfs) > 0:
                     weights = sum(self.wts)
                     rule_inputs = list(itertools.product(*self.mfs))
@@ -133,7 +143,6 @@ class NeuroFuzzySystem(object):
                     b2_nrn_info = b2.get(bigram, None)
                     b3_nrn_info = b3.get(bigram, None)
                     b4_nrn_info = b4.get(bigram, None)
-                    b5_nrn_info = b5.get(bigram, None)
                 except KeyError:
                     continue
 
@@ -163,12 +172,6 @@ class NeuroFuzzySystem(object):
                     self.mfs.append([b4_mf1, b4_mf2])
                     self.wts.append(b4_nrn_info[2])
                     self.wts.append(b4_nrn_info[4])
-                if b5_nrn_info is not None:
-                    b5_mf1 = b5_nrn_info[1] * b5_nrn_info[2]
-                    b5_mf2 = b5_nrn_info[3] * b5_nrn_info[4]
-                    self.mfs.append([b5_mf1, b5_mf2])
-                    self.wts.append(b5_nrn_info[2])
-                    self.wts.append(b5_nrn_info[4])
                 if len(self.mfs) > 0:
                     weights = sum(self.wts)
                     rule_inputs = list(itertools.product(*self.mfs))

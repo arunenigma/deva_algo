@@ -36,6 +36,25 @@ class LocationVector(object):
         element = etree.fromstring(fstring)
         return element
 
+    @staticmethod
+    def n_gram_cleaner(n_grams):
+        """
+        n_gram is a tuple
+        return: tuple with cleaned n_gram words
+        """
+        symbols = ".,[]();:<>+=&+%!@#~?{}|"
+        whitespace = "                       "
+        replace = maketrans(symbols, whitespace)
+
+        cleaned_n_grams = []
+        for n_gram in n_grams:
+            cleaned_n_gram = []
+            for word in n_gram:
+                word = word.translate(replace)
+                cleaned_n_gram.append(word)
+            cleaned_n_grams.append(tuple(cleaned_n_gram))
+        return cleaned_n_grams
+
     def generate_location_vector(self, branch, index):
         if branch.text is not None:
             branch.text = branch.text.encode('ascii', 'ignore')
@@ -49,8 +68,8 @@ class LocationVector(object):
                     for doc_word in range(0, len(words)):
                         word_location = (("{0}[{1}][{2}]".format(index, sentence, doc_word)), words[doc_word])
                         # any change in line below should be replicated in corpus.py also
-                        symbols = ",[]();:<>+=&+%!@#~?{}|"
-                        whitespace = "                      "
+                        symbols = ".,[]();:<>+=&+%!@#~?{}|"
+                        whitespace = "                       "
                         replace = maketrans(symbols, whitespace)
                         doc_word = word_location[1].translate(replace)
                         doc_word = doc_word.lstrip()
@@ -60,24 +79,28 @@ class LocationVector(object):
 
                     doc_bigrams = bigrams(words)
                     if not len(doc_bigrams) < 1:
+                        doc_bigrams = self.n_gram_cleaner(doc_bigrams)
                         for bi_gram in doc_bigrams:
                             bi_gram = ' '.join(bi_gram)
                             self.bi_grams.append(bi_gram)
 
                     doc_trigrams = trigrams(words)
                     if not len(doc_trigrams) < 1:
+                        doc_trigrams = self.n_gram_cleaner(doc_trigrams)
                         for tri_gram in doc_trigrams:
                             tri_gram = ' '.join(tri_gram)
                             self.tri_grams.append(tri_gram)
 
                     doc_fourgrams = ngrams(words, 4)
                     if not len(doc_fourgrams) < 1:
+                        doc_fourgrams = self.n_gram_cleaner(doc_fourgrams)
                         for four_gram in doc_fourgrams:
                             four_gram = ' '.join(four_gram)
                             self.four_grams.append(four_gram)
 
                     doc_fivegrams = ngrams(words, 5)
                     if not len(doc_fivegrams) < 1:
+                        doc_fivegrams = self.n_gram_cleaner(doc_fivegrams)
                         for five_gram in doc_fivegrams:
                             five_gram = ' '.join(five_gram)
                             self.five_grams.append(five_gram)
@@ -97,10 +120,6 @@ class HelperFunctions(object):
     def all_lowercase(s):
         m = re.search("[a-z]", s)
         return m
-
-    @staticmethod
-    def percentage(a, b):
-        return 100 * float(a / b)
 
 
 class WordTagger(HelperFunctions):
@@ -227,8 +246,8 @@ class WordTagger(HelperFunctions):
                     statement_loc_vec = statement_location[0]
                     for doc_word in range(0, len(words)):
                         word_location = (("{0}[{1}][{2}]".format(index, statement, doc_word)), words[doc_word])
-                        symbols = ",[]();:<>+=&+%!@#~?{}|"
-                        whitespace = "                      "
+                        symbols = ".,[]();:<>+=&+%!@#~?{}|"
+                        whitespace = "                       "
                         replace = maketrans(symbols, whitespace)
                         doc_word = word_location[1].translate(replace)
                         doc_word = doc_word.lstrip()
@@ -301,7 +320,6 @@ class WordTagger(HelperFunctions):
         WordTagger.tf_idf(self)
         WordTagger.english_dict_match(self)
         WordTagger.number_match(self)
-        WordTagger.smilie_match(self)
         WordTagger.repetitive_words(self)
         WordTagger.pos_tagging_unigrams(self)
 
@@ -431,12 +449,10 @@ class WordTagger(HelperFunctions):
         spell_checker_gb = enchant.Dict('en_GB')
         spell_checker_au = enchant.Dict('en_AU')
 
-        if self.doc_word.lower() in (corpus.stopwords.words('english')):
-            pass
-
         if spell_checker_us.check(self.doc_word.lower()) is True or spell_checker_gb.check(
                 self.doc_word.lower()) is True or spell_checker_au.check(self.doc_word.lower()) is True:
-            pass
+            if not self.doc_word.lower() in (corpus.stopwords.words('english')):
+                self.common_eng_words[self.doc_word] = self.tfidf
 
         if HelperFunctions.all_lowercase(self.doc_word) is None and spell_checker_us.check(
                 self.doc_word) is False:
@@ -444,10 +460,6 @@ class WordTagger(HelperFunctions):
 
     def number_match(self):
         if HelperFunctions.is_number(self.doc_word):
-            pass
-
-    def smilie_match(self):
-        if ':' in self.doc_word or ')' in self.doc_word or '(' in self.doc_word:
             pass
 
     def repetitive_words(self):
@@ -459,11 +471,14 @@ class WordTagger(HelperFunctions):
         # NN or NNP --> Nouns
         # filter all unigrams whose tf_idf score = 1
         if self.tfidf != 0.0:
+            #if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0 and \
+                    #(pos[0][1] == 'NN' or pos[0][1] == 'NNP' or pos[0][1] == 'NNS'):
             if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0 and \
-                    (pos[0][1] == 'NN' or pos[0][1] == 'NNP'):
+                (pos[0][1] == 'NNP'):
                 self.nouns_unigrams[self.doc_word] = self.tfidf
+
             if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0 and \
-                            pos[0][1] == 'VB':
+                            pos[0][1] == 'VB' or pos[0][1] == 'VBD':
                 self.verbs_unigrams[self.doc_word] = self.tfidf
             if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0:
                 if re.search(r'\b[A-Z]+(?:\W*[A-Z]+)*\b', self.doc_word):
@@ -502,9 +517,6 @@ class WordTagger(HelperFunctions):
 
         if len(pos) == 2 and pos[0] == 'NN' and pos[1] == 'NNS':
             self.bigram_nn_nns[string] = self.tfidf_bigram
-
-        if len(pos) == 2 and pos[0] == 'NN' and pos[1] == 'VBD':
-            self.bigram_nn_vbd[string] = self.tfidf_bigram
 
         # POS word bags for trigrams
         if len(pos) == 3 and pos[0] == 'NNP' and pos[1] == 'NNP' and pos[2] == 'NNP':
