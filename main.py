@@ -12,6 +12,7 @@ __email__ = "axs918@case.edu"
 
 from doc_analyzer import LocationVector, WordTagger
 from range_estimator import RangeCalculator
+from graph_search import GraphSearch
 #from fuzzy_plot import FuzzyPlotFilterI
 #from scatter_plot import ScatterPlot
 from concept_skeleton import ConceptSkeleton
@@ -107,7 +108,6 @@ if __name__ == '__main__':
     out_2 = open('PS.csv', 'wb')
     csv_out_2 = csv.writer(out_2)
     for i, doc in enumerate(recurse_dir(r'./epics', '*.txt')):
-
         print i, doc
         doc_file = open(doc, 'rb')
         doc = doc_file.read()
@@ -339,3 +339,13 @@ if __name__ == '__main__':
     dag.draw_master_dag()
     d = pgv.AGraph(directed=True, strict=True)
     dag.construct_dac(d)
+    #**************************************************************************************
+    #                                 GRAPH SEARCH
+    #**************************************************************************************
+    """
+    graph = dag.dag
+    dag_edges = dag.edges
+    search = GraphSearch(graph)
+    search.query_input()
+    search.ancestry()
+    """

@@ -49,7 +49,6 @@ class MasterUAG(object):
         self.edges = edges
         uag = pgv.AGraph(directed=False, strict=True)
         for edge in edges:
-            print edge[1], u.predecessors(edge[0]), len(u.predecessors(edge[1]))
             if not edge[1] in u.predecessors(edge[0]):
                 if self.ucg_to_uag_helper(u, edge[0], edge[1]) is True:
                     uag.add_node(edge[0], color='red', style='', shape='box',

@@ -25,7 +25,6 @@ class MasterDAG(object):
         self.concepts = concepts
         self.pi_dict = {}
         self.ps_dict = {}
-
         self.nodes = []
         self.edges = []
         self.th = 0
@@ -33,8 +32,8 @@ class MasterDAG(object):
         self.root_node = ''
         self.dag_nodes = []
         self.dag_edges = []
-
         self.computation = 0
+        self.dag = {}
 
     def create_dict(self):
         for row in self.pi:
@@ -167,10 +166,11 @@ class MasterDAG(object):
                 dag.add_edge(w1, w2, color='blue', style='', fontname='',
                              xlabel=edge[1])
         dag.write('dag.dot')
-        img = pgv.AGraph(file='dag.dot')  # img = pgv.AGraph('graph.dot') doesn't work | bug in Pygraphviz
-        img.layout(prog='dot')
-        img.draw('dag.pdf')
-        img.close()
+        g = pgv.AGraph(file='dag.dot')  # img = pgv.AGraph('graph.dot') doesn't work | bug in Pygraphviz
+        g.layout(prog='dot')
+        self.dag = str(g)  # dot string passed to graph search class
+        g.draw('dag.pdf')
+        g.close()
 
     @staticmethod
     def remove_n_gram_cliche(node_1, node_2):

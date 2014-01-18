@@ -1,2 +1,5 @@
-from nltk import pos_tag
-print pos_tag(['had'])
+lst = [['arun', 'hari'], ['arun', 'akila']]
+n = ['arun']
+if not n in lst:
+    lst.append(n)
+print lst
