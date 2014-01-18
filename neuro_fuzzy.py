@@ -95,14 +95,14 @@ class NeuroFuzzySystem(object):
                 self.mfs = []
                 self.wts = []
                 if u1_nrn_info is not None:
-                    u1_mf1 = u1_nrn_info[1] * u1_nrn_info[2] - 2
-                    u1_mf2 = u1_nrn_info[3] * u1_nrn_info[4] - 2
+                    u1_mf1 = u1_nrn_info[1] * u1_nrn_info[2] - 1
+                    u1_mf2 = u1_nrn_info[3] * u1_nrn_info[4] - 1
                     self.mfs.append([u1_mf1, u1_mf2])
                     self.wts.append(u1_nrn_info[2])
                     self.wts.append(u1_nrn_info[4])
                 if u2_nrn_info is not None:
-                    u2_mf1 = u2_nrn_info[1] * u2_nrn_info[2] + 3
-                    u2_mf2 = u2_nrn_info[3] * u2_nrn_info[4] + 3
+                    u2_mf1 = u2_nrn_info[1] * u2_nrn_info[2] + 1
+                    u2_mf2 = u2_nrn_info[3] * u2_nrn_info[4] + 1
                     self.mfs.append([u2_mf1, u2_mf2])
                     self.wts.append(u2_nrn_info[2])
                     self.wts.append(u2_nrn_info[4])

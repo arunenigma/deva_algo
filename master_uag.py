@@ -26,8 +26,8 @@ class MasterUAG(object):
                 if row[0] != row[1]:
                     if self.remove_n_gram_cliche(row[0], row[1]) == 0:
                         # choosing words whose PI > 0.4 for reducing computations
-                        if round(float(self.pi_dict.get(row[0])), 2) > 0.25 and round(float(self.pi_dict.get(row[1])),
-                                                                                     2) > 0.25:
+                        if round(float(self.pi_dict.get(row[0])), 2) > 0.4 and round(float(self.pi_dict.get(row[1])),
+                                                                                      2) > 0.4:
                             ucg.add_node(row[0], color='red', style='', shape='box',
                                          xlabel=round(float(self.pi_dict.get(row[0])), 2),
                                          fontname='courier')

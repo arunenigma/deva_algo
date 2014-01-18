@@ -1,3 +1,4 @@
+import csv
 from itertools import product, tee, izip
 from operator import itemgetter
 import pygraphviz as pgv
@@ -154,11 +155,14 @@ class MasterDAG(object):
                     edges.append([triple[0], triple[1]])
                     cleaned_rdf_triples.append([triple[0][0], triple[0][1], triple[1]])
 
+        cf_file = open('cf.csv', 'wb')
+        cf = csv.writer(cf_file)
         for edge in edges:
             if self.remove_n_gram_cliche(edge[0][0], edge[0][1]) == 0:
                 w1 = edge[0][0]
                 w2 = edge[0][1]
-                print 'N-triple ->', w1, 'is', w2
+                print 'Edge ->', w1, w2, edge[1]
+                cf.writerow([w1, w2, edge[1]])
                 dag.add_node(w1, color='red', style='', shape='box',
                              fontname='courier')
                 dag.add_node(w2, color='red', style='', shape='box',
@@ -171,6 +175,7 @@ class MasterDAG(object):
         self.dag = str(g)  # dot string passed to graph search class
         g.draw('dag.pdf')
         g.close()
+        cf_file.close()
 
     @staticmethod
     def remove_n_gram_cliche(node_1, node_2):

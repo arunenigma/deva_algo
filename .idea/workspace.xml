@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4bc70e8-30b0-4e37-becf-9fae94d4d908" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/graph_search.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dag.pdf" afterPath="$PROJECT_DIR$/dag.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PI.csv" afterPath="$PROJECT_DIR$/PI.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PS.csv" afterPath="$PROJECT_DIR$/PS.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dag.dot" afterPath="$PROJECT_DIR$/dag.dot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/final_pi_sheet.csv" afterPath="$PROJECT_DIR$/final_pi_sheet.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/foo.py" afterPath="$PROJECT_DIR$/foo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph_search.py" afterPath="$PROJECT_DIR$/graph_search.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master_dag.py" afterPath="$PROJECT_DIR$/master_dag.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master_uag.py" afterPath="$PROJECT_DIR$/master_uag.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modified_pi_sheet.csv" afterPath="$PROJECT_DIR$/modified_pi_sheet.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neuro_fuzzy.py" afterPath="$PROJECT_DIR$/neuro_fuzzy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi_sheet.csv" afterPath="$PROJECT_DIR$/pi_sheet.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uag.dot" afterPath="$PROJECT_DIR$/uag.dot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="decipher.iws" />
@@ -40,7 +48,7 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="62" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="5696">
+            <state line="281" column="26" selection-start="11313" selection-end="11313" vertical-scroll-proportion="0.0" vertical-offset="4269" max-vertical-offset="5696">
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -51,9 +59,9 @@
       <file leaf-file-name="graph_search.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/graph_search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="30" selection-start="3104" selection-end="3104" vertical-scroll-proportion="0.12617703" vertical-offset="1293" max-vertical-offset="1872">
+            <state line="20" column="12" selection-start="464" selection-end="464" vertical-scroll-proportion="-2.1939735" vertical-offset="1485" max-vertical-offset="2016">
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +70,10 @@
       <file leaf-file-name="master_uag.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/master_uag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="8" selection-start="1998" selection-end="2043" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="1888">
-              <folding />
+            <state line="29" column="94" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="1920">
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,20 +81,10 @@
       <file leaf-file-name="master_dag.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/master_dag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="68" selection-start="6135" selection-end="6135" vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="2992">
+            <state line="30" column="19" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="3072">
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <marker date="1389985987000" expanded="true" signature="4998:6179" placeholder="..." />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sql_integ.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql_integ.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -92,7 +92,7 @@
       <file leaf-file-name="proximity_finder.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proximity_finder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="69" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2880">
+            <state line="30" column="69" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0" vertical-offset="2349" max-vertical-offset="2880">
               <folding>
                 <element signature="e#22#50#0" expanded="true" />
               </folding>
@@ -103,7 +103,7 @@
       <file leaf-file-name="foo.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/foo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="9" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
               <folding />
             </state>
           </provider>
@@ -112,7 +112,7 @@
       <file leaf-file-name="neuro_fuzzy.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neuro_fuzzy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="60" selection-start="5219" selection-end="5219" vertical-scroll-proportion="0.0" vertical-offset="3072" max-vertical-offset="7056">
+            <state line="103" column="64" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.0" vertical-offset="1376" max-vertical-offset="7056">
               <folding />
             </state>
           </provider>
@@ -158,11 +158,11 @@
         <option value="$PROJECT_DIR$/proximity_finder.py" />
         <option value="$PROJECT_DIR$/sql_integ.py" />
         <option value="$PROJECT_DIR$/doc_analyzer.py" />
-        <option value="$PROJECT_DIR$/neuro_fuzzy.py" />
-        <option value="$PROJECT_DIR$/master_uag.py" />
-        <option value="$PROJECT_DIR$/master_dag.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/foo.py" />
+        <option value="$PROJECT_DIR$/master_dag.py" />
+        <option value="$PROJECT_DIR$/neuro_fuzzy.py" />
+        <option value="$PROJECT_DIR$/master_uag.py" />
         <option value="$PROJECT_DIR$/graph_search.py" />
       </list>
     </option>
@@ -556,7 +556,11 @@
       <created>1389935549047</created>
       <updated>1389935549047</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="query processing module added">
+      <created>1390008598989</created>
+      <updated>1390008598989</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -569,11 +573,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14418939" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09756097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.82137734" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30299252" sideWeight="0.85581064" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30299252" sideWeight="0.902439" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.8644189" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -615,7 +619,8 @@
     <MESSAGE value="added doc | model working primitively" />
     <MESSAGE value="fixed proximity score generation" />
     <MESSAGE value="UCG to UAG conversion fixed!" />
-    <option name="LAST_COMMIT_MESSAGE" value="UCG to UAG conversion fixed!" />
+    <MESSAGE value="query processing module added" />
+    <option name="LAST_COMMIT_MESSAGE" value="query processing module added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -661,9 +666,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/doc_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="455" column="0" selection-start="19166" selection-end="19166" vertical-scroll-proportion="0.0" vertical-offset="7271" max-vertical-offset="8848">
+          <folding>
+            <marker date="1389930998000" expanded="true" signature="4887:23145" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dag.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3776">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sql_integ.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
+        <state line="4" column="0" selection-start="71" selection-end="71" vertical-scroll-proportion="0.120527305" vertical-offset="0" max-vertical-offset="531">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
           <folding />
         </state>
       </provider>
@@ -677,67 +705,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc_analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="455" column="0" selection-start="19166" selection-end="19166" vertical-scroll-proportion="0.0" vertical-offset="7271" max-vertical-offset="8848">
-          <folding>
-            <marker date="1389930998000" expanded="true" signature="4887:23145" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neuro_fuzzy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="60" selection-start="5219" selection-end="5219" vertical-scroll-proportion="0.0" vertical-offset="3072" max-vertical-offset="7056">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/master_dag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="68" selection-start="6135" selection-end="6135" vertical-scroll-proportion="0.0" vertical-offset="2452" max-vertical-offset="2992">
+        <state line="30" column="19" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="3072">
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <marker date="1389985987000" expanded="true" signature="4998:6179" placeholder="..." />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dag.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3776">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="62" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="5696">
+        <state line="281" column="26" selection-start="11313" selection-end="11313" vertical-scroll-proportion="0.0" vertical-offset="4269" max-vertical-offset="5696">
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/foo.py">
+    <entry file="file://$PROJECT_DIR$/neuro_fuzzy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
+        <state line="103" column="64" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.0" vertical-offset="1376" max-vertical-offset="7056">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/master_uag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="8" selection-start="1998" selection-end="2043" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="1888">
-          <folding />
+        <state line="29" column="94" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="1920">
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph_search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="30" selection-start="3104" selection-end="3104" vertical-scroll-proportion="0.12617703" vertical-offset="1293" max-vertical-offset="1872">
+        <state line="20" column="12" selection-start="464" selection-end="464" vertical-scroll-proportion="-2.1939735" vertical-offset="1485" max-vertical-offset="2016">
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

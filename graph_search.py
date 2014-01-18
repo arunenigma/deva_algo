@@ -1,3 +1,4 @@
+import csv
 import fnmatch
 import os
 import pygraphviz as pgv
@@ -5,12 +6,18 @@ import networkx as nx
 
 
 class GraphSearch(object):
-    def __init__(self, dot):
+    def __init__(self, dot, cf_map):
         self.dag = dot
+        self.cf_map = cf_map
         self.stmts = []
         self.matched_ancestors = []
         self.matched_children = []
         self.results = {}
+        self.cf = {}
+
+    def create_cf_map(self):
+        for row in self.cf_map:
+            self.cf[(row[0], row[1])] = row[2]
 
     def ancestry(self, q):
         q_kw = q.split(' ')
@@ -103,7 +110,9 @@ class GraphSearch(object):
 
 if __name__ == '__main__':
     dag_dot = open('dag.dot', 'rb').read()
-    search = GraphSearch(dag_dot)
+    cf_file = open('cf.csv', 'rb')
+    cf = csv.reader(cf_file)
+    search = GraphSearch(dag_dot, cf)
     query = raw_input('Enter search query: ')
     search.ancestry(query)
     search.get_statements()
