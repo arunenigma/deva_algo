@@ -453,7 +453,6 @@ class WordTagger(HelperFunctions):
                 self.doc_word.lower()) is True or spell_checker_au.check(self.doc_word.lower()) is True:
             if not self.doc_word.lower() in (corpus.stopwords.words('english')):
                 self.common_eng_words[self.doc_word] = self.tfidf
-
         if HelperFunctions.all_lowercase(self.doc_word) is None and spell_checker_us.check(
                 self.doc_word) is False:
             pass
@@ -469,22 +468,18 @@ class WordTagger(HelperFunctions):
     def pos_tagging_unigrams(self):
         pos = pos_tag([self.doc_word])
         # NN or NNP --> Nouns
-        # filter all unigrams whose tf_idf score = 1
-        if self.tfidf != 0.0:
-            #if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0 and \
-                    #(pos[0][1] == 'NN' or pos[0][1] == 'NNP' or pos[0][1] == 'NNS'):
-            if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0 and \
-                (pos[0][1] == 'NNP'):
-                self.nouns_unigrams[self.doc_word] = self.tfidf
-
-            if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0 and \
-                            pos[0][1] == 'VB' or pos[0][1] == 'VBD':
-                self.verbs_unigrams[self.doc_word] = self.tfidf
-            if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0:
-                if re.search(r'\b[A-Z]+(?:\W*[A-Z]+)*\b', self.doc_word):
-                    self.all_caps_unigrams[self.doc_word] = self.tfidf
-                if re.search(r'^[0-9]', self.doc_word):
-                    self.numbers_unigrams[self.doc_word] = self.tfidf
+        #if self.tfidf != 0.0:  # filters out of Rama (data set is small)
+        if not self.doc_word.lower() in (corpus.stopwords.words('english')) and \
+                (pos[0][1] == 'NN' or pos[0][1] == 'NNP' or pos[0][1] == 'NNS'):
+            self.nouns_unigrams[self.doc_word] = self.tfidf
+        if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0 and \
+                        pos[0][1] == 'VB' or pos[0][1] == 'VBD':
+            self.verbs_unigrams[self.doc_word] = self.tfidf
+        if not self.doc_word.lower() in (corpus.stopwords.words('english')) and not self.idf == 1.0:
+            if re.search(r'\b[A-Z]+(?:\W*[A-Z]+)*\b', self.doc_word):
+                self.all_caps_unigrams[self.doc_word] = self.tfidf
+            if re.search(r'^[0-9]', self.doc_word):
+                self.numbers_unigrams[self.doc_word] = self.tfidf
 
     @staticmethod
     def first_letter_upper(string):

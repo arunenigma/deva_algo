@@ -12,7 +12,6 @@ class MasterUAG(object):
         self.concepts = {}
         self.pi_dict = {}
         self.ps_dict = {}
-
         self.edges = []
 
     def draw_master_uag(self, ucg):
@@ -26,8 +25,8 @@ class MasterUAG(object):
                 if row[0] != row[1]:
                     if self.remove_n_gram_cliche(row[0], row[1]) == 0:
                         # choosing words whose PI > 0.4 for reducing computations
-                        if round(float(self.pi_dict.get(row[0])), 2) > 0.4 and round(float(self.pi_dict.get(row[1])),
-                                                                                      2) > 0.4:
+                        if round(float(self.pi_dict.get(row[0])), 2) > 0.0 and round(float(self.pi_dict.get(row[1])),
+                                                                                     2) > 0.0:
                             ucg.add_node(row[0], color='red', style='', shape='box',
                                          xlabel=round(float(self.pi_dict.get(row[0])), 2),
                                          fontname='courier')
@@ -41,7 +40,7 @@ class MasterUAG(object):
                                          fontname='courier')
         ucg.write('ucg.dot')
         u = pgv.AGraph(file='ucg.dot')
-        u.layout(prog='dot')
+        #u.layout(prog='dot')
 
         # Building UCG from UAG cleverly. Transforming is computational more expensive I guess!
         # love Python
@@ -65,13 +64,13 @@ class MasterUAG(object):
 
         uag.write('uag.dot')
         u = pgv.AGraph(file='uag.dot')
-        u.layout(prog='dot')
-        u.draw('uag.pdf')
-
+        #u.layout(prog='dot')
+        #u.draw('uag.pdf')
+        print 'UAG forest created'
         edges = u.edges()
         g1 = nx.Graph(edges)
         self.skeletons = nx.connected_components(g1)[:]
-
+        print 'skeletons created'
         for skeleton in self.skeletons:
             paths = []
             pairs = list(itertools.combinations(skeleton, 2))
@@ -82,11 +81,11 @@ class MasterUAG(object):
                     if tuple(reversed(pair)) == edge:
                         paths.append(tuple(reversed(pair)))
             self.inference_paths.append(paths)
+        print 'inf paths created'
 
     def ucg_to_uag_helper(self, uag, n1, n2):
         ancestors = uag.predecessors(n1)
         n2_edges = list(itertools.product([n2], ancestors))
-        print n2, n2_edges
         flag = True
         reversed_n2_edges = []
         for n2_edge in n2_edges:

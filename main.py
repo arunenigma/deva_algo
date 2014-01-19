@@ -15,6 +15,7 @@ from range_estimator import RangeCalculator
 from graph_search import GraphSearch
 #from fuzzy_plot import FuzzyPlotFilterI
 #from scatter_plot import ScatterPlot
+from aggregate_scores import AggregateScores
 from concept_skeleton import ConceptSkeleton
 from proximity_finder import ProximityFinder
 from neuro_fuzzy import NeuroFuzzySystem
@@ -102,13 +103,13 @@ if __name__ == '__main__':
 
     # document analysing and creating word bags
     print 'document analysing and creating word bags ...'
-    doc_ID = 0
-    out_1 = open('PI.csv', 'wb')
-    csv_out_1 = csv.writer(out_1)
-    out_2 = open('PS.csv', 'wb')
-    csv_out_2 = csv.writer(out_2)
     for i, doc in enumerate(recurse_dir(r'./epics', '*.txt')):
         print i, doc
+        doc_ID = 0
+        out_1 = open('PI.csv', 'wb')
+        csv_out_1 = csv.writer(out_1)
+        out_2 = open('PS.csv', 'wb')
+        csv_out_2 = csv.writer(out_2)
         doc_file = open(doc, 'rb')
         doc = doc_file.read()
         doc_words = []
@@ -309,43 +310,62 @@ if __name__ == '__main__':
             ske.write_output_to_csv()
             doc_file.close()
 
-    out_1.close()
-    out_2.close()
+            out_1.close()
+            out_2.close()
+            # aggregate PI and PS scores
+            # since PI and PS can differ with each document under consideration
+            f1 = open('PI.csv', 'rb')
+            csv_f1 = csv.reader(f1)
+            f2 = open('PS.csv', 'rb')
+            csv_f2 = csv.reader(f2)
+            f3 = open('PI_agg.csv', 'wb')
+            csv_f3 = csv.writer(f3)
+            f4 = open('PS_agg.csv', 'wb')
+            csv_f4 = csv.writer(f4)
 
-    # drawing master UAG from UCG
-    master_ucg = pgv.AGraph(directed=False, strict=True)
-    f1 = open('PI.csv', 'rb')
-    csv_f1 = csv.reader(f1)
-    f2 = open('PS.csv', 'rb')
-    csv_f2 = csv.reader(f2)
-    ucg = MasterUAG(csv_f1, csv_f2)
-    ucg.draw_master_uag(master_ucg)
-    ucg.extract_concepts()
-    concepts = ucg.concepts
+            agg = AggregateScores(csv_f1, csv_f2, csv_f3, csv_f4)
+            agg.consolidate_pi_scores()
+            agg.consolidate_ps_scores()
 
-    f1.close()
-    f2.close()
+            f1.close()
+            f2.close()
+            f3.close()
+            f4.close()
 
-    #**************************************************************************************
-    #                                   UAG to DAG
-    #**************************************************************************************
-    master_dag = pgv.AGraph(directed=True, strict=True)
-    f1 = open('PI.csv', 'rb')
-    csv_f1 = csv.reader(f1)
-    f2 = open('PS.csv', 'rb')
-    csv_f2 = csv.reader(f2)
-    dag = MasterDAG(csv_f1, csv_f2, concepts)
-    dag.create_dict()
-    dag.draw_master_dag()
-    d = pgv.AGraph(directed=True, strict=True)
-    dag.construct_dac(d)
-    #**************************************************************************************
-    #                                 GRAPH SEARCH
-    #**************************************************************************************
-    """
-    graph = dag.dag
-    dag_edges = dag.edges
-    search = GraphSearch(graph)
-    search.query_input()
-    search.ancestry()
-    """
+            # drawing master UAG from UCG
+            master_ucg = pgv.AGraph(directed=False, strict=True)
+            f1 = open('PI_agg.csv', 'rb')
+            csv_f1 = csv.reader(f1)
+            f2 = open('PS_agg.csv', 'rb')
+            csv_f2 = csv.reader(f2)
+            ucg = MasterUAG(csv_f1, csv_f2)
+            ucg.draw_master_uag(master_ucg)
+            concepts = ucg.concepts
+            ucg.extract_concepts()
+
+            f1.close()
+            f2.close()
+
+            #**************************************************************************************
+            #                                   UAG to DAG
+            #**************************************************************************************
+            master_dag = pgv.AGraph(directed=True, strict=True)
+            f1 = open('PI.csv', 'rb')
+            csv_f1 = csv.reader(f1)
+            f2 = open('PS.csv', 'rb')
+            csv_f2 = csv.reader(f2)
+            dag = MasterDAG(csv_f1, csv_f2, concepts, i)
+            dag.create_dict()
+            dag.draw_master_dag()
+            d = pgv.AGraph(directed=True, strict=True)
+            dag.construct_dac(d)
+            #**************************************************************************************
+            #                                 GRAPH SEARCH
+            #**************************************************************************************
+            """
+            graph = dag.dag
+            dag_edges = dag.edges
+            search = GraphSearch(graph)
+            search.query_input()
+            search.ancestry()
+            """

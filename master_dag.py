@@ -20,7 +20,7 @@ class Memoize(object):
 
 
 class MasterDAG(object):
-    def __init__(self, pi, ps, concepts):
+    def __init__(self, pi, ps, concepts, ch):
         self.pi = pi
         self.ps = ps
         self.concepts = concepts
@@ -35,11 +35,12 @@ class MasterDAG(object):
         self.dag_edges = []
         self.computation = 0
         self.dag = {}
+        self.ch = ch  # chapter number
 
     def create_dict(self):
         for row in self.pi:
-            if float(row[1]) > self.th:
-                self.pi_dict[row[0]] = row[1]
+            self.pi_dict[row[0]] = row[1]
+        print self.pi_dict
         for row in self.ps:
             self.ps_dict[tuple([row[0], row[1]])] = row[2]
         for nodes, edges in self.concepts.iteritems():
@@ -69,7 +70,7 @@ class MasterDAG(object):
         self.dag_nodes.remove(root)
         search_node_pairs = list(product([root], self.dag_nodes))
         for node_pair in search_node_pairs:
-            if node_pair in self.ps_dict.keys():
+            if node_pair in self.ps_dict.keys() or tuple(reversed(node_pair)) in self.ps_dict.keys():
                 print 'CF 1'
                 cf = self.cf_case_1(node_pair)
                 candidates.append([node_pair, round(cf, 2)])
@@ -99,6 +100,7 @@ class MasterDAG(object):
         """
             iterative method to find all paths; given a reference and an inspection node
         """
+        print 'finding paths'
         self.computation += 1
         print 'uag to dag ..', self.computation
         path = []
@@ -115,6 +117,7 @@ class MasterDAG(object):
         return paths[0]
 
     def cf_case_1(self, pair):
+        print pair
         psi_r = float(self.pi_dict.get(pair[0]))
         psi_i = float(self.pi_dict.get(pair[1]))
         ps = self.ps_dict.get((pair[0], pair[1]))
@@ -155,13 +158,13 @@ class MasterDAG(object):
                     edges.append([triple[0], triple[1]])
                     cleaned_rdf_triples.append([triple[0][0], triple[0][1], triple[1]])
 
-        cf_file = open('cf.csv', 'wb')
+        dag_csv = 'dag' + str(self.ch) + '.csv'
+        cf_file = open(dag_csv, 'wb')
         cf = csv.writer(cf_file)
         for edge in edges:
             if self.remove_n_gram_cliche(edge[0][0], edge[0][1]) == 0:
                 w1 = edge[0][0]
                 w2 = edge[0][1]
-                print 'Edge ->', w1, w2, edge[1]
                 cf.writerow([w1, w2, edge[1]])
                 dag.add_node(w1, color='red', style='', shape='box',
                              fontname='courier')
@@ -169,11 +172,12 @@ class MasterDAG(object):
                              fontname='courier')
                 dag.add_edge(w1, w2, color='blue', style='', fontname='',
                              xlabel=edge[1])
-        dag.write('dag.dot')
-        g = pgv.AGraph(file='dag.dot')  # img = pgv.AGraph('graph.dot') doesn't work | bug in Pygraphviz
+
+        dag_name = 'dag' + str(self.ch) + '.dot'
+        dag.write(dag_name)
+        g = pgv.AGraph(file=dag_name)  # img = pgv.AGraph('graph.dot') doesn't work | bug in Pygraphviz
         g.layout(prog='dot')
         self.dag = str(g)  # dot string passed to graph search class
-        g.draw('dag.pdf')
         g.close()
         cf_file.close()
 

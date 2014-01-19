@@ -6,7 +6,7 @@ import networkx as nx
 
 
 class GraphSearch(object):
-    def __init__(self, dot, cf_map):
+    def __init__(self, dot, cf_map, dot_name):
         self.dag = dot
         self.cf_map = cf_map
         self.stmts = []
@@ -14,20 +14,44 @@ class GraphSearch(object):
         self.matched_children = []
         self.results = {}
         self.cf = {}
+        self.cf_normalized = {}
+        self.dot_name = dot_name
+        self.edges = []
 
-    def create_cf_map(self):
+    def draw_dags(self):
         for row in self.cf_map:
-            self.cf[(row[0], row[1])] = row[2]
+            self.cf[(row[0], row[1])] = float(row[2])
+        max_cf = max(self.cf.values())
+        for pair, con_fac in self.cf.iteritems():
+            self.cf_normalized[(pair[0], pair[1])] = con_fac / max_cf
+
+        dag = pgv.AGraph(directed=False, strict=True)
+        d = dag.from_string(self.dag)
+        self.edges = d.edges()
+        for edge in self.edges:
+            dag.add_node(edge[0], color='red', style='', shape='box',
+                         fontname='courier')
+            dag.add_node(edge[1], color='red', style='', shape='box',
+                         fontname='courier')
+            dag.add_edge(edge[0], edge[1], color='blue', style='', fontname='',
+                         xlabel=round(self.cf_normalized.get((edge[0], edge[1])), 2))
+        name = self.dot_name.replace('.dot', '.pdf')
+        dag.write(self.dot_name)
+        u = pgv.AGraph(file=self.dot_name)
+        u.layout(prog='dot')
+        u.draw(name)
 
     def ancestry(self, q):
         q_kw = q.split(' ')
         dag = pgv.AGraph(directed=False, strict=True)
         d = dag.from_string(self.dag)
         edges = d.edges()
+        #print edges
         for edge in edges:
             for kw in q_kw:
                 if kw == edge[0]:
-                    print 'Match Found: ', edge, list(reversed(self.get_predecessors(d, edge[0]))), d.successors(edge[0])
+                    print 'Match Found: ', edge, list(reversed(self.get_predecessors(d, edge[0]))), d.successors(
+                        edge[0])
                     print
                     ancestors = list(reversed(self.get_predecessors(d, edge[0])))
                     ancestors.append(edge[0])
@@ -40,7 +64,8 @@ class GraphSearch(object):
                         self.matched_children.append(children)
 
                 elif kw == edge[1]:
-                    print 'Match Found: ', edge, list(reversed(self.get_predecessors(d, edge[1]))), self.get_successors(d, edge[1])
+                    print 'Match Found: ', edge, list(reversed(self.get_predecessors(d, edge[1]))), self.get_successors(
+                        d, edge[1])
                     print
                     ancestors = list(reversed(self.get_predecessors(d, edge[1])))
                     ancestors.append(edge[1])
@@ -73,18 +98,18 @@ class GraphSearch(object):
         return children
 
     def get_statements(self):
-        for doc in self.recurse_dir(r'./epics', '*.txt'):
-            doc_file = open(doc, 'rb')
-            doc = doc_file.read()
-            for stmt in doc.split('. '):
+        for document in self.recurse_dir(r'./epics', '*.txt'):
+            document_file = open(document, 'rb')
+            document = document_file.read()
+            for stmt in document.split('. '):
                 self.stmts.append(stmt)
-            doc_file.close()
+            document_file.close()
 
     @staticmethod
     def recurse_dir(path, file_type):
-        for root, dirs, docs in os.walk(path):
-            for document in fnmatch.filter(docs, file_type):
-                yield os.path.join(root, document)
+        for r, directory, documents in os.walk(path):
+            for document in fnmatch.filter(documents, file_type):
+                yield os.path.join(r, document)
 
     def all_lower_case(self):
         stmts = []
@@ -108,14 +133,20 @@ class GraphSearch(object):
             print stmt
             print '**************************************************************************\n'
 
+
 if __name__ == '__main__':
-    dag_dot = open('dag.dot', 'rb').read()
-    cf_file = open('cf.csv', 'rb')
-    cf = csv.reader(cf_file)
-    search = GraphSearch(dag_dot, cf)
     query = raw_input('Enter search query: ')
-    search.ancestry(query)
-    search.get_statements()
-    search.all_lower_case()
-    search.match_stmts()
-    search.print_results()
+    for root, dirs, docs in os.walk('./'):
+        for doc in docs:
+            if 'dag' in doc and '.dot' in doc:
+                dag_dot = open(doc, 'rb').read()
+                cf_file = open(doc.replace('.dot', '.csv'), 'rb')
+                cf = csv.reader(cf_file)
+                search = GraphSearch(dag_dot, cf, doc)
+                search.draw_dags()
+                #
+                search.ancestry(query)
+                search.get_statements()
+                search.all_lower_case()
+                search.match_stmts()
+                search.print_results()
