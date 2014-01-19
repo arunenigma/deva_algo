@@ -44,7 +44,7 @@ if __name__ == '__main__':
     corpus_trigrams = []
     corpus_fourgrams = []
     corpus_fivegrams = []
-    for doc in recurse_dir(r'./epics', '*.txt'):
+    for doc in recurse_dir(r'./corpus', '*.txt'):
         doc_file = open(doc, 'rb')
         doc = doc_file.read()
         doc_words = []
@@ -103,8 +103,10 @@ if __name__ == '__main__':
 
     # document analysing and creating word bags
     print 'document analysing and creating word bags ...'
-    for i, doc in enumerate(recurse_dir(r'./epics', '*.txt')):
+    for i, doc in enumerate(recurse_dir(r'./docs', '*.txt')):
         print i, doc
+        doc_name = doc.split('/')[-1].split('.')[0]
+        print doc_name
         doc_ID = 0
         out_1 = open('PI.csv', 'wb')
         csv_out_1 = csv.writer(out_1)
@@ -354,7 +356,7 @@ if __name__ == '__main__':
             csv_f1 = csv.reader(f1)
             f2 = open('PS.csv', 'rb')
             csv_f2 = csv.reader(f2)
-            dag = MasterDAG(csv_f1, csv_f2, concepts, i)
+            dag = MasterDAG(csv_f1, csv_f2, concepts, doc_name)
             dag.create_dict()
             dag.draw_master_dag()
             d = pgv.AGraph(directed=True, strict=True)

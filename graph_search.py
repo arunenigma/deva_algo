@@ -98,7 +98,7 @@ class GraphSearch(object):
         return children
 
     def get_statements(self):
-        for document in self.recurse_dir(r'./epics', '*.txt'):
+        for document in self.recurse_dir(r'./corpus', '*.txt'):
             document_file = open(document, 'rb')
             document = document_file.read()
             for stmt in document.split('. '):
@@ -127,6 +127,7 @@ class GraphSearch(object):
                     self.results[tuple(match)] = ' '.join(stmt)
 
     def print_results(self):
+        print
         for match, stmt in self.results.iteritems():
             print 'MATCH:', match
             print
@@ -136,13 +137,13 @@ class GraphSearch(object):
 
 if __name__ == '__main__':
     query = raw_input('Enter search query: ')
-    for root, dirs, docs in os.walk('./'):
+    for root, dirs, docs in os.walk('./dot'):
         for doc in docs:
-            if 'dag' in doc and '.dot' in doc:
-                dag_dot = open(doc, 'rb').read()
-                cf_file = open(doc.replace('.dot', '.csv'), 'rb')
+            if '.dot' in doc:
+                dag_dot = open('./dot/' + doc, 'rb').read()
+                cf_file = open('./dot/' + doc.replace('.dot', '.csv'), 'rb')
                 cf = csv.reader(cf_file)
-                search = GraphSearch(dag_dot, cf, doc)
+                search = GraphSearch(dag_dot, cf, './dot/' + doc)
                 search.draw_dags()
                 #
                 search.ancestry(query)

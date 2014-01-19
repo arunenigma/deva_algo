@@ -20,7 +20,7 @@ class Memoize(object):
 
 
 class MasterDAG(object):
-    def __init__(self, pi, ps, concepts, ch):
+    def __init__(self, pi, ps, concepts, doc_name):
         self.pi = pi
         self.ps = ps
         self.concepts = concepts
@@ -35,7 +35,7 @@ class MasterDAG(object):
         self.dag_edges = []
         self.computation = 0
         self.dag = {}
-        self.ch = ch  # chapter number
+        self.doc_name = doc_name  # chapter number
 
     def create_dict(self):
         for row in self.pi:
@@ -158,8 +158,8 @@ class MasterDAG(object):
                     edges.append([triple[0], triple[1]])
                     cleaned_rdf_triples.append([triple[0][0], triple[0][1], triple[1]])
 
-        dag_csv = 'dag' + str(self.ch) + '.csv'
-        cf_file = open(dag_csv, 'wb')
+        dag_csv = str(self.doc_name) + '.csv'
+        cf_file = open('./dot/' + dag_csv, 'wb')
         cf = csv.writer(cf_file)
         for edge in edges:
             if self.remove_n_gram_cliche(edge[0][0], edge[0][1]) == 0:
@@ -173,9 +173,9 @@ class MasterDAG(object):
                 dag.add_edge(w1, w2, color='blue', style='', fontname='',
                              xlabel=edge[1])
 
-        dag_name = 'dag' + str(self.ch) + '.dot'
-        dag.write(dag_name)
-        g = pgv.AGraph(file=dag_name)  # img = pgv.AGraph('graph.dot') doesn't work | bug in Pygraphviz
+        dag_name = str(self.doc_name) + '.dot'
+        dag.write('./dot/' + dag_name)
+        g = pgv.AGraph(file='./dot/' + dag_name)  # img = pgv.AGraph('graph.dot') doesn't work | bug in Pygraphviz
         g.layout(prog='dot')
         self.dag = str(g)  # dot string passed to graph search class
         g.close()

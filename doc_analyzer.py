@@ -239,7 +239,6 @@ class WordTagger(HelperFunctions):
 
             if not branch.getchildren():
                 statements = branch.text.split('. ')
-
                 for statement in range(0, len(statements)):
                     statement_location = (("{0}[{1}]".format(index, statement)), statements[statement])
                     words = statements[statement].split()
