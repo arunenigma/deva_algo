@@ -70,11 +70,10 @@ class MasterUAG(object):
         edges = u.edges()
         g1 = nx.Graph(edges)
         self.skeletons = nx.connected_components(g1)[:]
-        print 'skeletons created'
+
         for skeleton in self.skeletons:
             paths = []
-            pairs = list(itertools.combinations(skeleton, 2))
-            for pair in pairs:
+            for pair in itertools.combinations(skeleton, 2):
                 for edge in edges:
                     if pair == edge:
                         paths.append(pair)

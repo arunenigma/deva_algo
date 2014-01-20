@@ -40,7 +40,6 @@ class MasterDAG(object):
     def create_dict(self):
         for row in self.pi:
             self.pi_dict[row[0]] = row[1]
-        print self.pi_dict
         for row in self.ps:
             self.ps_dict[tuple([row[0], row[1]])] = row[2]
         for nodes, edges in self.concepts.iteritems():
@@ -50,7 +49,7 @@ class MasterDAG(object):
     def draw_master_dag(self):
         for nodes, edges in zip(self.nodes, self.edges):
             candidates = []
-            # assuming the root is the node with maximum PI
+            # fixing the root as the node with maximum PI
             for node in nodes:
                 if not self.pi_dict.get(node) is None:
                     candidates.append([node, self.pi_dict.get(node)])

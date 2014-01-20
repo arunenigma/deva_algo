@@ -1,8 +1,11 @@
 import csv
 import fnmatch
+from operator import itemgetter
 import os
+import itertools
 import pygraphviz as pgv
 import networkx as nx
+from itertools import tee, izip, chain
 
 
 class GraphSearch(object):
@@ -17,6 +20,9 @@ class GraphSearch(object):
         self.cf_normalized = {}
         self.dot_name = dot_name
         self.edges = []
+        self.family = []
+        self.file_name = ''
+        self.pp = []
 
     def draw_dags(self):
         for row in self.cf_map:
@@ -25,6 +31,7 @@ class GraphSearch(object):
         for pair, con_fac in self.cf.iteritems():
             self.cf_normalized[(pair[0], pair[1])] = con_fac / max_cf
 
+        """
         dag = pgv.AGraph(directed=False, strict=True)
         d = dag.from_string(self.dag)
         self.edges = d.edges()
@@ -40,6 +47,7 @@ class GraphSearch(object):
         u = pgv.AGraph(file=self.dot_name)
         u.layout(prog='dot')
         u.draw(name)
+        """
 
     def ancestry(self, q):
         q_kw = q.split(' ')
@@ -50,9 +58,11 @@ class GraphSearch(object):
         for edge in edges:
             for kw in q_kw:
                 if kw == edge[0]:
-                    print 'Match Found: ', edge, list(reversed(self.get_predecessors(d, edge[0]))), d.successors(
-                        edge[0])
-                    print
+                    """
+                    print 'Match Found: ', edge[0], edge, list(
+                        reversed(self.get_predecessors(d, edge[0]))), d.successors(edge[0])
+                    """
+                    #print
                     ancestors = list(reversed(self.get_predecessors(d, edge[0])))
                     ancestors.append(edge[0])
                     if not ancestors in self.matched_ancestors:
@@ -64,9 +74,11 @@ class GraphSearch(object):
                         self.matched_children.append(children)
 
                 elif kw == edge[1]:
-                    print 'Match Found: ', edge, list(reversed(self.get_predecessors(d, edge[1]))), self.get_successors(
-                        d, edge[1])
-                    print
+                    """
+                    print 'Match Found: ', edge[1], edge, list(reversed(self.get_predecessors(d, edge[1])))
+                    self.get_successors(d, edge[1])
+                    """
+                    #print
                     ancestors = list(reversed(self.get_predecessors(d, edge[1])))
                     ancestors.append(edge[1])
                     if not ancestors in self.matched_ancestors:
@@ -98,18 +110,13 @@ class GraphSearch(object):
         return children
 
     def get_statements(self):
-        for document in self.recurse_dir(r'./corpus', '*.txt'):
-            document_file = open(document, 'rb')
-            document = document_file.read()
-            for stmt in document.split('. '):
-                self.stmts.append(stmt)
-            document_file.close()
-
-    @staticmethod
-    def recurse_dir(path, file_type):
-        for r, directory, documents in os.walk(path):
-            for document in fnmatch.filter(documents, file_type):
-                yield os.path.join(r, document)
+        for corpus, topics, files in os.walk("./corpus"):
+            path = '/'.join(corpus.split('/'))
+            for txt_file in files:
+                if '.txt' in txt_file:
+                    if self.dot_name.split('/')[-1].split('.')[-2] == txt_file.split('.')[-2]:
+                        self.file_name = txt_file
+                        self.stmts = open(path + '/' + txt_file, 'rb').read().split('. ')
 
     def all_lower_case(self):
         stmts = []
@@ -120,23 +127,50 @@ class GraphSearch(object):
 
     def match_stmts(self):
         for stmt in self.stmts:
-            for item in self.matched_ancestors + self.matched_children:
-                match = set(stmt).intersection(set(item))
-                query_kw = item[-1]
+            self.family = list(itertools.chain(*(self.matched_ancestors + self.matched_children)))
+
+            if self.family:
+                #print 'family->', self.family
+                match = set(stmt).intersection(set(self.family))
+                query_kw = self.family[-1]
                 if query_kw in match:
                     self.results[tuple(match)] = ' '.join(stmt)
 
-    def print_results(self):
-        print
+    @staticmethod
+    def pairs(iterable):
+        a, b = tee(iterable)
+        return izip(a, chain(b, [next(b)]))
+
+    def calculate_cf(self, match):
+        if len(match) > 1:
+            edges = tuple(itertools.combinations(match, 2))
+            conf = 0.0
+            num_edges = 0
+
+            for edge in edges:
+                if edge in self.cf_normalized.keys():
+                    num_edges += 1
+                    conf += self.cf_normalized.get(edge)
+                elif tuple(reversed(edge)) in self.cf_normalized.keys():
+                    num_edges += 1
+                    conf += self.cf_normalized.get(tuple(reversed(edge)))
+            if num_edges > 0:
+                return conf / num_edges
+        else:
+            pass  # ??
+
+    def collect_results(self):
         for match, stmt in self.results.iteritems():
-            print 'MATCH:', match
-            print
-            print stmt
-            print '**************************************************************************\n'
+            related = list((set(self.family)) - set(match))
+            con = self.calculate_cf(match)
+            if not con:
+                con = 0.0
+            return [self.file_name, match, related, stmt, con]
 
 
 if __name__ == '__main__':
     query = raw_input('Enter search query: ')
+    coll_results = []
     for root, dirs, docs in os.walk('./dot'):
         for doc in docs:
             if '.dot' in doc:
@@ -150,4 +184,22 @@ if __name__ == '__main__':
                 search.get_statements()
                 search.all_lower_case()
                 search.match_stmts()
-                search.print_results()
+                coll_results.append(search.collect_results())
+
+    def pretty_printing(collected):
+        collected = [x for x in collected if x is not None]
+        matches = len(collected)
+        print '> Found ', matches, 'matches'
+        print
+        print '-------------------------------------------------------------------------------------------------------'
+        results = list(reversed(sorted(collected, key=itemgetter(4))))
+        for i, result in enumerate(results):
+            print 'RANK > ', i + 1, ' CF > ', result[4]
+            print 'FILE > ', result[0]
+            print 'CONTEXT > ', ', '.join(result[1])
+            print 'RELATED > ', ', '.join(result[2])
+            print 'STMT > ', result[3]
+            print
+            print '-------------------------------------------------------------------------------------------------------'
+
+    pretty_printing(coll_results)
